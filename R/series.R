@@ -14,7 +14,7 @@
 oc_series_list <- function(oc_con, filter = "", sort = "", limit = 0, offset = 0) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/series/?filter=", filter, "&sort=", sort, "&limit=", limit, "&offset=", offset, sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd=userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
   return(response)
 }
 
@@ -30,7 +30,7 @@ oc_series_list <- function(oc_con, filter = "", sort = "", limit = 0, offset = 0
 oc_series_single <- function(oc_con, seriesid) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/series/", seriesid, sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd=userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
   return(response)
 }
 
@@ -46,7 +46,7 @@ oc_series_single <- function(oc_con, seriesid) {
 oc_series_acl <- function(oc_con, seriesid) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/series/", seriesid, "/acl", sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd=userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
   return(response)
 }
 
@@ -63,7 +63,7 @@ oc_series_acl <- function(oc_con, seriesid) {
 oc_series_metadata <- function(oc_con, seriesid, type = "dublincore/series") {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/series/", seriesid, "/metadata?type=", type, sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd=userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
   return(response)
 }
 
@@ -79,6 +79,6 @@ oc_series_metadata <- function(oc_con, seriesid, type = "dublincore/series") {
 oc_series_properties <- function(oc_con, seriesid) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/series/", seriesid, "/properties", sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd=userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
   return(response)
 }

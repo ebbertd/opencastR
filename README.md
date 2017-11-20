@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ebbertd/opencastR.svg?branch=master)](https://travis-ci.org/ebbertd/opencastR)
+
 # Overview
 
 opencastR is a R package that is designed to read information from the external API of an [Opencast](http://www.opencast.org/) server.
