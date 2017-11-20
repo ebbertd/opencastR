@@ -4,7 +4,7 @@
 \alias{oc_event_publications_list}
 \title{Request an event's list of publications.}
 \usage{
-oc_event_publications_list(oc_con, eventid, type = "dublincore/episode")
+oc_event_publications_list(oc_con, eventid)
 }
 \arguments{
 \item{oc_con}{A vector consiting of the elements: Opencast URL, user and password.}
