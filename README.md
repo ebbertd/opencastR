@@ -4,9 +4,9 @@ opencastR is a R package that is designed to read information from the external 
 
 ## Installation
 
-```R
-# The easiest way to get opencastR is to install it using the devtools:
+The easiest way to get opencastR is to install it using the devtools:
 
+```R
 install.packages("devtools")
 devtools::install_github("tidyverse/haven")
 ```
