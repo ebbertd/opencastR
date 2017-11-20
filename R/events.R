@@ -64,7 +64,7 @@ oc_event_metadata <- function(oc_con, eventid, type = "dublincore/episode") {
 #' @export
 #' @md
 
-oc_event_publications_list <- function(oc_con, eventid, type = "dublincore/episode") {
+oc_event_publications_list <- function(oc_con, eventid) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/events/", eventid, "/publications", sep = "")
   response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd=userpwd, httpauth = 1L))
