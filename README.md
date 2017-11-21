@@ -10,7 +10,7 @@ The easiest way to get opencastR is to install it using the devtools:
 
 ```R
 install.packages("devtools")
-devtools::install_github("tidyverse/haven")
+devtools::install_github("ebbertd/opencastR")
 ```
 
 ## Usage
