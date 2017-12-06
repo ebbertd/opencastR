@@ -14,7 +14,7 @@
 oc_groups_list <- function(oc_con, filter = "", sort = "", limit = 0, offset = 0) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/groups/?filter=", filter, "&sort=", sort, "&limit=", limit, "&offset=", offset, sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -31,6 +31,6 @@ oc_groups_list <- function(oc_con, filter = "", sort = "", limit = 0, offset = 0
 oc_groups_single <- function(oc_con, groupid) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/groups/", groupid, sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }

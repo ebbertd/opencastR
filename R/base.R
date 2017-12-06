@@ -10,7 +10,7 @@
 oc_base <- function(oc_con) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- "/api/"
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -26,7 +26,7 @@ oc_base <- function(oc_con) {
 oc_organization <- function(oc_con) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- "/api/info/organization"
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -42,7 +42,7 @@ oc_organization <- function(oc_con) {
 oc_organization_properties <- function(oc_con) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- "/api/info/organization/properties"
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -58,7 +58,7 @@ oc_organization_properties <- function(oc_con) {
 oc_user <- function(oc_con) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- "/api/info/me"
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -74,7 +74,7 @@ oc_user <- function(oc_con) {
 oc_user_roles <- function(oc_con) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- "/api/info/me/roles"
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -90,7 +90,7 @@ oc_user_roles <- function(oc_con) {
 oc_api_version <- function(oc_con) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- "/api/version"
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -106,6 +106,6 @@ oc_api_version <- function(oc_con) {
 oc_api_version_default <- function(oc_con) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- "/api/version/default"
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }

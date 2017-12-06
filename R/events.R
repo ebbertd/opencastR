@@ -15,7 +15,7 @@
 oc_event_single <- function(oc_con, eventid, sign = FALSE, withacl = FALSE, withmetadata = FALSE, withpublications = FALSE) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/events/", eventid, "?sign=", sign, "&withacl=", withacl, "&withmetadata=", withmetadata, "&withpublications=", withpublications, sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -32,7 +32,7 @@ oc_event_single <- function(oc_con, eventid, sign = FALSE, withacl = FALSE, with
 oc_event_acl <- function(oc_con, eventid) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/events/", eventid, "/acl", sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -50,7 +50,7 @@ oc_event_acl <- function(oc_con, eventid) {
 oc_event_metadata <- function(oc_con, eventid, type = "dublincore/episode") {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/events/", eventid, "/metadata?type=", type, sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -67,7 +67,7 @@ oc_event_metadata <- function(oc_con, eventid, type = "dublincore/episode") {
 oc_event_publications_list <- function(oc_con, eventid) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/events/", eventid, "/publications", sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -85,7 +85,7 @@ oc_event_publications_list <- function(oc_con, eventid) {
 oc_event_publication <- function(oc_con, eventid, publicationid) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/events/", eventid, "/publications/", publicationid, sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
 
@@ -109,6 +109,6 @@ oc_event_publication <- function(oc_con, eventid, publicationid) {
 oc_event_list <- function(oc_con, sign = FALSE, withacl = FALSE, withmetadata = FALSE, withpublications = FALSE, filter = "", sort = "", limit = 0, offset = 0) {
   userpwd <- paste(oc_con[2], ":", oc_con[3], sep = "")
   endpoint <- paste("/api/events/", "?sign=", sign, "&withacl=", withacl, "&withmetadata=", withmetadata, "&withpublications=", withpublications, "&filter=", filter, "&sort=", sort, "&limit=", limit, "&offset=", offset, sep = "")
-  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L))
+  response <- jsonlite::fromJSON(RCurl::getURL(paste(oc_con[1], endpoint, sep = ""), userpwd = userpwd, httpauth = 1L, .encoding = "UTF-8"))
   return(response)
 }
