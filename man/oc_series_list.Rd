@@ -4,7 +4,8 @@
 \alias{oc_series_list}
 \title{Request a list of series}
 \usage{
-oc_series_list(oc_con, filter = "", sort = "", limit = 0, offset = 0)
+oc_series_list(oc_con, filter = "", sort = "", limit = 0,
+  offset = 0)
 }
 \arguments{
 \item{oc_con}{A vector consiting of the elements: Opencast URL, user and password.}

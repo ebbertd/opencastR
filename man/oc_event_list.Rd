@@ -4,9 +4,9 @@
 \alias{oc_event_list}
 \title{Request a list of events}
 \usage{
-oc_event_list(oc_con, sign = FALSE, withacl = FALSE, withmetadata = FALSE,
-  withpublications = FALSE, filter = "", sort = "", limit = 0,
-  offset = 0)
+oc_event_list(oc_con, sign = FALSE, withacl = FALSE,
+  withmetadata = FALSE, withpublications = FALSE, filter = "",
+  sort = "", limit = 0, offset = 0)
 }
 \arguments{
 \item{oc_con}{A vector consiting of the elements: Opencast URL, user and password.}
