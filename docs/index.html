@@ -82,9 +82,12 @@
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p>Every function requires a vector with the Opencast connection details. For example:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>ocapi &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"URL"</span>, <span class="st">"USER"</span>, <span class="st">"PASSWORD"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">oc_user</span>(ocapi)</span></code></pre></div>
+<p>Every function requires the hostname, username and password to be set as environment variables. For example:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span>(<span class="dt">OPENCAST_HOST =</span> <span class="st">"https://legacy.opencast.org"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="kw"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span>(<span class="dt">OPENCAST_USERNAME =</span> <span class="st">"admin"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="kw"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span>(<span class="dt">OPENCAST_PASSWORD =</span> <span class="st">"opencast"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="kw"><a href="reference/oc_api.html">oc_api</a></span>()</span></code></pre></div>
 </div>
 </div>
 

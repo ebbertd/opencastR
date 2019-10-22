@@ -5,8 +5,7 @@
 #' This function expects the hostname, username and password to be set as environment variables.
 #'
 #' @return A list containing the settings for the anonymous role, the name, the admin role and the id.
-#' @import httr
-#' @importFrom jsonlite fromJSON
+#' @importFrom httr modify_url
 #' @export
 #' @examples
 #' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
@@ -21,41 +20,8 @@ oc_info_organization <- function() {
   # Construct the url for the api call
   url <- modify_url(oc_hostname(), path = path)
 
-  # Save api call to variable
-  resp <-
-    GET(url,
-        authenticate(oc_username(), oc_password()),
-        oc_package_useragent())
-
-  # Check if api returned json, otherwise return an error
-  if (http_type(resp) != "application/json") {
-    stop("API did not return json", call. = FALSE)
-  }
-
-  # Parse the response
-  parsed <-
-    fromJSON(content(resp, "text", encoding = "UTF-8"), simplifyVector = FALSE)
-
-  # Turn an API error into an R error
-  if (http_error(resp)) {
-    stop(
-      sprintf(
-        "Opencast API request failed [%s]\n%s\n<%s>",
-        status_code(resp),
-        parsed$message,
-        parsed$documentation_url
-      ),
-      call. = FALSE
-    )
-  }
-
-  # Structure the return
-  structure(list(
-    content = parsed,
-    path = path,
-    response = resp
-  ),
-  class = "opencast_api")
+  # Query the api and return the response
+  oc_package_query(url)
 }
 
 #' Print result of oc_info_organization()
