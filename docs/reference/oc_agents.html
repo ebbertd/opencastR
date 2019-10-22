@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Query Opencast default api versions — oc_version_default • opencastR</title>
+<title>Query Opencast list of capture agent — oc_agents • opencastR</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Query Opencast default api versions — oc_version_default" />
-<meta property="og:description" content="Returns a list containing the default api version." />
+<meta property="og:title" content="Query Opencast list of capture agent — oc_agents" />
+<meta property="og:description" content="Returns a list of agents." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -105,21 +105,33 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Query Opencast default api versions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_version_default.R'><code>R/oc_version_default.R</code></a></small>
-    <div class="hidden name"><code>oc_version_default.Rd</code></div>
+    <h1>Query Opencast list of capture agent</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_agents.R'><code>R/oc_agents.R</code></a></small>
+    <div class="hidden name"><code>oc_agents.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Returns a list containing the default api version.</p>
+    <p>Returns a list of agents.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>oc_version_default</span>()</pre>
+    <pre class="usage"><span class='fu'>oc_agents</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>limit</th>
+      <td><p>The maximum number of results to return for a single request.</p></td>
+    </tr>
+    <tr>
+      <th>offset</th>
+      <td><p>The index of the first result to return.</p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list containing the default api version.</p>
+    <p>A list containing the capture agents</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This function expects the hostname, username and password to be set as environment variables.</p>
@@ -129,29 +141,37 @@
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-<span class='fu'>oc_version_default</span>()</div><div class='output co'>#&gt; $content
-#&gt; $content$default
-#&gt; [1] "v1.2.0"
+<span class='fu'>oc_agents</span>()</div><div class='output co'>#&gt; $content
+#&gt; $content[[1]]
+#&gt; $content[[1]]$agent_id
+#&gt; [1] "SMP"
 #&gt; 
-#&gt; $content$versions
-#&gt; $content$versions[[1]]
-#&gt; [1] "v1.0.0"
+#&gt; $content[[1]]$inputs
+#&gt; $content[[1]]$inputs[[1]]
+#&gt; [1] "defaults"
 #&gt; 
-#&gt; $content$versions[[2]]
-#&gt; [1] "v1.1.0"
+#&gt; 
+#&gt; $content[[1]]$update
+#&gt; [1] "2019-10-22T11:54:53Z"
+#&gt; 
+#&gt; $content[[1]]$url
+#&gt; [1] "http://192.168.100.251"
+#&gt; 
+#&gt; $content[[1]]$status
+#&gt; [1] "idle"
 #&gt; 
 #&gt; 
 #&gt; 
 #&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/version"
+#&gt; [1] "https://legacy.opencast.org/api/agents/"
 #&gt; 
 #&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/version]
+#&gt; Response [https://legacy.opencast.org/api/agents/?limit=0&amp;offset=0]
 #&gt;   Date: 2019-10-22 11:54
 #&gt;   Status: 200
-#&gt;   Content-Type: application/json
-#&gt;   Size: 51 B
-#&gt; 
+#&gt;   Content-Type: application/v1.2.0+json
+#&gt;   Size: 123 B
+#&gt; &lt;BINARY BODY&gt;
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "opencast_api"</div></pre>
@@ -159,6 +179,7 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
       <li><a href="#examples">Examples</a></li>

@@ -114,7 +114,8 @@
     <p>This is an internal function of the opencastR package to query the api.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>oc_package_query</span>(<span class='kw'>url</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org/api/"</span>)</pre>
+    <pre class="usage"><span class='fu'>oc_package_query</span>(<span class='kw'>url</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org/api/"</span>,
+  <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -122,6 +123,10 @@
     <tr>
       <th>url</th>
       <td><p>The URL for the api call.</p></td>
+    </tr>
+    <tr>
+      <th>query</th>
+      <td><p>A list of query parameters.</p></td>
     </tr>
     </table>
 
@@ -143,7 +148,7 @@
 #&gt; 
 #&gt; $response
 #&gt; Response [https://legacy.opencast.org/api/]
-#&gt;   Date: 2019-10-22 10:55
+#&gt;   Date: 2019-10-22 11:54
 #&gt;   Status: 200
 #&gt;   Content-Type: application/json
 #&gt;   Size: 57 B
