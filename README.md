@@ -15,9 +15,12 @@ devtools::install_github("ebbertd/opencastR")
 
 ## Usage
 
-Every function requires a vector with the Opencast connection details. For example:
+Every function requires the hostname, username and password to be set as environment variables. For example:
 
 ```R
-ocapi <- c("URL", "USER", "PASSWORD")
-oc_user(ocapi)
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
+
+oc_api()
 ```
