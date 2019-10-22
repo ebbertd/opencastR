@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Query Opencast default api versions — oc_version_default • opencastR</title>
+<title>Query Opencast for a specific group — oc_group • opencastR</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Query Opencast default api versions — oc_version_default" />
-<meta property="og:description" content="Returns a list containing the default api version." />
+<meta property="og:title" content="Query Opencast for a specific group — oc_group" />
+<meta property="og:description" content="Returns a single group." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -105,21 +105,29 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Query Opencast default api versions</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_version_default.R'><code>R/oc_version_default.R</code></a></small>
-    <div class="hidden name"><code>oc_version_default.Rd</code></div>
+    <h1>Query Opencast for a specific group</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_group.R'><code>R/oc_group.R</code></a></small>
+    <div class="hidden name"><code>oc_group.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Returns a list containing the default api version.</p>
+    <p>Returns a single group.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>oc_version_default</span>()</pre>
+    <pre class="usage"><span class='fu'>oc_group</span>(<span class='kw'>groupId</span> <span class='kw'>=</span> <span class='st'>""</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>groupId</th>
+      <td><p>The group id</p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list containing the default api version.</p>
+    <p>Returns a single group.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This function expects the hostname, username and password to be set as environment variables.</p>
@@ -129,29 +137,39 @@
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-<span class='fu'>oc_version_default</span>()</div><div class='output co'>#&gt; $content
-#&gt; $content$default
-#&gt; [1] "v1.2.0"
+<span class='fu'>oc_group</span>(<span class='st'>"MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"</span>)</div><div class='output co'>#&gt; $content
+#&gt; $content$identifier
+#&gt; [1] "MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"
 #&gt; 
-#&gt; $content$versions
-#&gt; $content$versions[[1]]
-#&gt; [1] "v1.0.0"
+#&gt; $content$role
+#&gt; [1] "ROLE_GROUP_MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"
 #&gt; 
-#&gt; $content$versions[[2]]
-#&gt; [1] "v1.1.0"
+#&gt; $content$organization
+#&gt; [1] "mh_default_org"
 #&gt; 
+#&gt; $content$roles
+#&gt; [1] "ROLE_API_EVENTS_METADATA_VIEW,ROLE_API_SERIES_DELETE,ROLE_API_GROUPS_CREATE,ROLE_API_EVENTS_MEDIA_VIEW,ROLE_API_SERIES_VIEW,ROLE_API_SERIES_METADATA_VIEW,ROLE_API_WORKFLOW_INSTANCE_EDIT,ROLE_API_SERIES_METADATA_EDIT,ROLE_API_WORKFLOW_INSTANCE_DELETE,ROLE_API_SERIES_ACL_VIEW,ROLE_API_WORKFLOW_INSTANCE_VIEW,ROLE_API_EVENTS_CREATE,ROLE_API_SERIES_PROPERTIES_EDIT,ROLE_API_WORKFLOW_INSTANCE_CREATE,ROLE_API_SERIES_CREATE,ROLE_API_GROUPS_DELETE,ROLE_API_EVENTS_ACL_EDIT,ROLE_API_SERIES_EDIT,ROLE_API_EVENTS_METADATA_EDIT,ROLE_API_EVENTS_METADATA_DELETE,ROLE_API_EVENTS_ACL_DELETE,ROLE_API_EVENTS_VIEW,ROLE_API_GROUPS_VIEW,ROLE_API_EVENTS_SCHEDULING_EDIT,ROLE_API_EVENTS_DELETE,ROLE_API_SECURITY_EDIT,ROLE_API,ROLE_API_CAPTURE_AGENTS_VIEW,ROLE_API_SERIES_ACL_EDIT,ROLE_API_SERIES_PROPERTIES_VIEW,ROLE_API_EVENTS_PUBLICATIONS_VIEW,ROLE_API_EVENTS_SCHEDULING_VIEW,ROLE_SUDO,ROLE_API_SERIES_METADATA_DELETE,ROLE_API_WORKFLOW_DEFINITION_VIEW,ROLE_API_EVENTS_EDIT,ROLE_API_EVENTS_ACL_VIEW,ROLE_API_GROUPS_EDIT"
+#&gt; 
+#&gt; $content$members
+#&gt; [1] ""
+#&gt; 
+#&gt; $content$name
+#&gt; [1] "Opencast Project External Applications"
+#&gt; 
+#&gt; $content$description
+#&gt; [1] "External application users of 'Opencast Project'"
 #&gt; 
 #&gt; 
 #&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/version"
+#&gt; [1] "https://legacy.opencast.org/api/groups/MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"
 #&gt; 
 #&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/version]
+#&gt; Response [https://legacy.opencast.org/api/groups/MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS]
 #&gt;   Date: 2019-10-22 18:42
 #&gt;   Status: 200
-#&gt;   Content-Type: application/json
-#&gt;   Size: 51 B
-#&gt; 
+#&gt;   Content-Type: application/v1.2.0+json
+#&gt;   Size: 1.28 kB
+#&gt; &lt;BINARY BODY&gt;
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "opencast_api"</div></pre>
@@ -159,6 +177,7 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
       <li><a href="#examples">Examples</a></li>
