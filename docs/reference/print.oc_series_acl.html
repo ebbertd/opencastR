@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Query Opencast base api — oc_api • opencastR</title>
+<title>Print result of oc_series_acl() — print.oc_series_acl • opencastR</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Query Opencast base api — oc_api" />
-<meta property="og:description" content="Returns key characteristics of the API such as the server name and the default version." />
+<meta property="og:title" content="Print result of oc_series_acl() — print.oc_series_acl" />
+<meta property="og:description" content="Print a structured return of the oc_series_acl() function." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -105,48 +105,79 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Query Opencast base api</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_api.R'><code>R/oc_api.R</code></a></small>
-    <div class="hidden name"><code>oc_api.Rd</code></div>
+    <h1>Print result of oc_series_acl()</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_series_acl.R'><code>R/oc_series_acl.R</code></a></small>
+    <div class="hidden name"><code>print.oc_series_acl.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Returns key characteristics of the API such as the server name and the default version.</p>
+    <p>Print a structured return of the oc_series_acl() function.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>oc_api</span>()</pre>
+    <pre class="usage"><span class='co'># S3 method for oc_series_acl</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>The return of the function this print function relates to.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Possible further options to the print function.</p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list containing the default api version and server url.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <p>A structured print of the return by the oc_series_acl() function.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <p>This function expects the hostname, username and password to be set as environment variables.</p>
+    <div class='dont-index'><p><code><a href='oc_series_acl.html'>oc_series_acl</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-<span class='fu'>oc_api</span>()</div><div class='output co'>#&gt; $content
-#&gt; $content$version
-#&gt; [1] "v1.2.0"
+<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_series_acl.html'>oc_series_acl</a></span>(<span class='st'>"446eed07-853b-4865-9813-07e1fb39d2d5"</span>)
+
+<span class='no'>resp</span></div><div class='output co'>#&gt; $content
+#&gt; $content[[1]]
+#&gt; $content[[1]]$allow
+#&gt; [1] TRUE
 #&gt; 
-#&gt; $content$url
-#&gt; [1] "http://localhost:8080/api"
+#&gt; $content[[1]]$role
+#&gt; [1] "ROLE_ADMIN"
+#&gt; 
+#&gt; $content[[1]]$action
+#&gt; [1] "read"
+#&gt; 
+#&gt; 
+#&gt; $content[[2]]
+#&gt; $content[[2]]$allow
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $content[[2]]$role
+#&gt; [1] "ROLE_ADMIN"
+#&gt; 
+#&gt; $content[[2]]$action
+#&gt; [1] "write"
+#&gt; 
 #&gt; 
 #&gt; 
 #&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/"
+#&gt; [1] "https://legacy.opencast.org/api/series/446eed07-853b-4865-9813-07e1fb39d2d5/acl"
 #&gt; 
 #&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/]
+#&gt; Response [https://legacy.opencast.org/api/series/446eed07-853b-4865-9813-07e1fb39d2d5/acl]
 #&gt;   Date: 2019-10-22 19:01
 #&gt;   Status: 200
-#&gt;   Content-Type: application/json
-#&gt;   Size: 57 B
-#&gt; 
+#&gt;   Content-Type: application/v1.2.0+json
+#&gt;   Size: 104 B
+#&gt; &lt;BINARY BODY&gt;
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "opencast_api"</div></pre>
@@ -154,8 +185,9 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
+      <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

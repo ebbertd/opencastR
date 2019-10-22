@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Query Opencast base api — oc_api • opencastR</title>
+<title>Query Opencast for a list of groups — oc_list_groups • opencastR</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Query Opencast base api — oc_api" />
-<meta property="og:description" content="Returns key characteristics of the API such as the server name and the default version." />
+<meta property="og:title" content="Query Opencast for a list of groups — oc_list_groups" />
+<meta property="og:description" content="Returns a list of groups." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -105,21 +105,41 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Query Opencast base api</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_api.R'><code>R/oc_api.R</code></a></small>
-    <div class="hidden name"><code>oc_api.Rd</code></div>
+    <h1>Query Opencast for a list of groups</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_list_groups.R'><code>R/oc_list_groups.R</code></a></small>
+    <div class="hidden name"><code>oc_list_groups.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Returns key characteristics of the API such as the server name and the default version.</p>
+    <p>Returns a list of groups.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>oc_api</span>()</pre>
+    <pre class="usage"><span class='fu'>oc_list_groups</span>(<span class='kw'>filter</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>filter</th>
+      <td><p>A comma seperated list of filters to limit the results with. A filter is the filter's name followed by a colon ":" and then the value to filter with so it is the form :.</p></td>
+    </tr>
+    <tr>
+      <th>sort</th>
+      <td><p>Sort the results based upon a list of comma seperated sorting criteria. In the comma seperated list each type of sorting is specified as a pair such as: :ASC or :DESC. Adding the suffix ASC or DESC sets the order as ascending or descending order and is mandatory.</p></td>
+    </tr>
+    <tr>
+      <th>limit</th>
+      <td><p>The maximum number of results to return for a single request.</p></td>
+    </tr>
+    <tr>
+      <th>offset</th>
+      <td><p>The index of the first result to return.</p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A list containing the default api version and server url.</p>
+    <p>Returns a list of groups.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This function expects the hostname, username and password to be set as environment variables.</p>
@@ -129,24 +149,64 @@
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-<span class='fu'>oc_api</span>()</div><div class='output co'>#&gt; $content
-#&gt; $content$version
-#&gt; [1] "v1.2.0"
+<span class='fu'>oc_list_groups</span>()</div><div class='output co'>#&gt; $content
+#&gt; $content[[1]]
+#&gt; $content[[1]]$identifier
+#&gt; [1] "MH_DEFAULT_ORG_SYSTEM_ADMINS"
 #&gt; 
-#&gt; $content$url
-#&gt; [1] "http://localhost:8080/api"
+#&gt; $content[[1]]$role
+#&gt; [1] "ROLE_GROUP_MH_DEFAULT_ORG_SYSTEM_ADMINS"
+#&gt; 
+#&gt; $content[[1]]$organization
+#&gt; [1] "mh_default_org"
+#&gt; 
+#&gt; $content[[1]]$roles
+#&gt; [1] "ROLE_SUDO,ROLE_OAUTH_USER,ROLE_ADMIN,ROLE_ANONYMOUS"
+#&gt; 
+#&gt; $content[[1]]$members
+#&gt; [1] "admin"
+#&gt; 
+#&gt; $content[[1]]$name
+#&gt; [1] "Opencast Project System Administrators"
+#&gt; 
+#&gt; $content[[1]]$description
+#&gt; [1] "System administrators of 'Opencast Project'"
+#&gt; 
+#&gt; 
+#&gt; $content[[2]]
+#&gt; $content[[2]]$identifier
+#&gt; [1] "MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"
+#&gt; 
+#&gt; $content[[2]]$role
+#&gt; [1] "ROLE_GROUP_MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"
+#&gt; 
+#&gt; $content[[2]]$organization
+#&gt; [1] "mh_default_org"
+#&gt; 
+#&gt; $content[[2]]$roles
+#&gt; [1] "ROLE_API_EVENTS_METADATA_VIEW,ROLE_API_SERIES_DELETE,ROLE_API_GROUPS_CREATE,ROLE_API_EVENTS_MEDIA_VIEW,ROLE_API_SERIES_VIEW,ROLE_API_SERIES_METADATA_VIEW,ROLE_API_WORKFLOW_INSTANCE_EDIT,ROLE_API_SERIES_METADATA_EDIT,ROLE_API_WORKFLOW_INSTANCE_DELETE,ROLE_API_SERIES_ACL_VIEW,ROLE_API_WORKFLOW_INSTANCE_VIEW,ROLE_API_EVENTS_CREATE,ROLE_API_SERIES_PROPERTIES_EDIT,ROLE_API_WORKFLOW_INSTANCE_CREATE,ROLE_API_SERIES_CREATE,ROLE_API_GROUPS_DELETE,ROLE_API_EVENTS_ACL_EDIT,ROLE_API_SERIES_EDIT,ROLE_API_EVENTS_METADATA_EDIT,ROLE_API_EVENTS_METADATA_DELETE,ROLE_API_EVENTS_ACL_DELETE,ROLE_API_EVENTS_VIEW,ROLE_API_GROUPS_VIEW,ROLE_API_EVENTS_SCHEDULING_EDIT,ROLE_API_EVENTS_DELETE,ROLE_API_SECURITY_EDIT,ROLE_API,ROLE_API_CAPTURE_AGENTS_VIEW,ROLE_API_SERIES_ACL_EDIT,ROLE_API_SERIES_PROPERTIES_VIEW,ROLE_API_EVENTS_PUBLICATIONS_VIEW,ROLE_API_EVENTS_SCHEDULING_VIEW,ROLE_SUDO,ROLE_API_SERIES_METADATA_DELETE,ROLE_API_WORKFLOW_DEFINITION_VIEW,ROLE_API_EVENTS_EDIT,ROLE_API_EVENTS_ACL_VIEW,ROLE_API_GROUPS_EDIT"
+#&gt; 
+#&gt; $content[[2]]$members
+#&gt; [1] ""
+#&gt; 
+#&gt; $content[[2]]$name
+#&gt; [1] "Opencast Project External Applications"
+#&gt; 
+#&gt; $content[[2]]$description
+#&gt; [1] "External application users of 'Opencast Project'"
+#&gt; 
 #&gt; 
 #&gt; 
 #&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/"
+#&gt; [1] "https://legacy.opencast.org/api/groups/"
 #&gt; 
 #&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/]
+#&gt; Response [https://legacy.opencast.org/api/groups/?filter=&amp;sort=&amp;limit=0&amp;offset=0]
 #&gt;   Date: 2019-10-22 19:01
 #&gt;   Status: 200
-#&gt;   Content-Type: application/json
-#&gt;   Size: 57 B
-#&gt; 
+#&gt;   Content-Type: application/v1.2.0+json
+#&gt;   Size: 1.6 kB
+#&gt; &lt;BINARY BODY&gt;
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "opencast_api"</div></pre>
@@ -154,6 +214,7 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
       <li><a href="#examples">Examples</a></li>

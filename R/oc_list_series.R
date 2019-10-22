@@ -1,15 +1,10 @@
-#' Query Opencast for a list of events
+#' Query Opencast for a list of series
 #'
-#' Returns a list of events.
+#' Returns a list of series.
 #'
 #' This function expects the hostname, username and password to be set as environment variables.
 #'
-#' @return Returns a list of events.
-#' @param sign Whether public distribution urls should be signed.
-#' @param withacl Whether the acl metadata should be included in the response.
-#' @param withmetadata Whether the metadata catalogs should be included in the response.
-#' @param withscheduling Whether the scheduling information should be included in the response.
-#' @param withpublications Whether the publication ids and urls should be included in the response.
+#' @return Returns a list of series.
 #' @param filter A comma seperated list of filters to limit the results with. A filter is the filter's name followed by a colon ":" and then the value to filter with so it is the form :.
 #' @param sort Sort the results based upon a list of comma seperated sorting criteria. In the comma seperated list each type of sorting is specified as a pair such as: :ASC or :DESC. Adding the suffix ASC or DESC sets the order as ascending or descending order and is mandatory.
 #' @param limit The maximum number of results to return for a single request.
@@ -21,23 +16,14 @@
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' oc_events()
-oc_events <- function(sign = FALSE,
-                      withacl = FALSE,
-                      withmetadata = FALSE,
-                      withscheduling = FALSE,
-                      withpublications = FALSE,
-                      filter = "",
-                      sort = "",
-                      limit = 0,
-                      offset = 0) {
+#' oc_list_series()
+oc_list_series <- function(filter = "",
+                           sort = "",
+                           limit = 0,
+                           offset = 0) {
   # Set the url path
-  path <- "/api/events/"
+  path <- "/api/series/"
   query <- list(
-    sign = sign,
-    withacl = withacl,
-    withmetadata = withmetadata,
-    withscheduling = withscheduling,
     filter = filter,
     sort = sort,
     limit = limit,
@@ -51,14 +37,14 @@ oc_events <- function(sign = FALSE,
   oc_package_query(url, query = query)
 }
 
-#' Print result of oc_events()
+#' Print result of oc_list_series()
 #'
-#' Print a structured return of the oc_events() function.
+#' Print a structured return of the oc_list_series() function.
 #'
 #' @param x The return of the function this print function relates to.
 #' @param ... Possible further options to the print function.
-#' @return A structured print of the return by the oc_events() function.
-#' @seealso \code{\link{oc_events}}
+#' @return A structured print of the return by the oc_list_series() function.
+#' @seealso \code{\link{oc_list_series}}
 #' @importFrom utils str
 #' @export
 #' @examples
@@ -66,10 +52,10 @@ oc_events <- function(sign = FALSE,
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' resp <- oc_events()
+#' resp <- oc_list_series()
 #'
 #' resp
-print.oc_events <- function(x, ...) {
+print.oc_list_series <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)
   invisible(x)

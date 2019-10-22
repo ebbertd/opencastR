@@ -14,8 +14,8 @@
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' oc_event_publications("91df4c57-9631-4a84-b814-d8e9b36a3c32")
-oc_event_publications <- function(eventId = "",
+#' oc_event_list_publications("91df4c57-9631-4a84-b814-d8e9b36a3c32")
+oc_event_list_publications <- function(eventId = "",
                                   sign = FALSE) {
   # Check needed arguments
   if (eventId == "") {
@@ -33,14 +33,14 @@ oc_event_publications <- function(eventId = "",
   oc_package_query(url, query = query)
 }
 
-#' Print result of oc_event_publications()
+#' Print result of oc_event_list_publications()
 #'
-#' Print a structured return of the oc_event_publications() function.
+#' Print a structured return of the oc_event_list_publications() function.
 #'
 #' @param x The return of the function this print function relates to.
 #' @param ... Possible further options to the print function.
-#' @return A structured print of the return by the oc_event_publications() function.
-#' @seealso \code{\link{oc_event_publications}}
+#' @return A structured print of the return by the oc_event_list_publications() function.
+#' @seealso \code{\link{oc_event_list_publications}}
 #' @importFrom utils str
 #' @export
 #' @examples
@@ -48,10 +48,10 @@ oc_event_publications <- function(eventId = "",
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' resp <- oc_event_publications("91df4c57-9631-4a84-b814-d8e9b36a3c32")
+#' resp <- oc_event_list_publications("91df4c57-9631-4a84-b814-d8e9b36a3c32")
 #'
 #' resp
-print.oc_event_publications <- function(x, ...) {
+print.oc_event_list_publications <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)
   invisible(x)

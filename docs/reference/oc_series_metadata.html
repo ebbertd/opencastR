@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Print result of oc_event_metadata() — print.oc_event_metadata • opencastR</title>
+<title>Query Opencast for a specific series metadata — oc_series_metadata • opencastR</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Print result of oc_event_metadata() — print.oc_event_metadata" />
-<meta property="og:description" content="Print a structured return of the oc_event_metadata() function." />
+<meta property="og:title" content="Query Opencast for a specific series metadata — oc_series_metadata" />
+<meta property="og:description" content="Returns a series' metadata of all types or returns a series' metadata collection of the given type when the query string parameter type is specified." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -105,46 +105,43 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Print result of oc_event_metadata()</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_event_metadata.R'><code>R/oc_event_metadata.R</code></a></small>
-    <div class="hidden name"><code>print.oc_event_metadata.Rd</code></div>
+    <h1>Query Opencast for a specific series metadata</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_series_metadata.R'><code>R/oc_series_metadata.R</code></a></small>
+    <div class="hidden name"><code>oc_series_metadata.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Print a structured return of the oc_event_metadata() function.</p>
+    <p>Returns a series' metadata of all types or returns a series' metadata collection of the given type when the query string parameter type is specified.</p>
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for oc_event_metadata</span>
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>oc_series_metadata</span>(<span class='kw'>seriesId</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>""</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>The return of the function this print function relates to.</p></td>
+      <th>seriesId</th>
+      <td><p>The event id</p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>Possible further options to the print function.</p></td>
+      <th>type</th>
+      <td><p>The type of metadata to get</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A structured print of the return by the oc_event_metadata() function.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <p>Returns a series' metadata of all types or returns a series' metadata collection of the given type when the query string parameter type is specified.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <div class='dont-index'><p><code><a href='oc_event_metadata.html'>oc_event_metadata</a></code></p></div>
+    <p>This function expects the hostname, username and password to be set as environment variables.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_event_metadata.html'>oc_event_metadata</a></span>(<span class='st'>"91df4c57-9631-4a84-b814-d8e9b36a3c32"</span>)
-
-<span class='no'>resp</span></div><div class='output co'>#&gt; $content
+<span class='fu'>oc_series_metadata</span>(<span class='st'>"91df4c57-9631-4a84-b814-d8e9b36a3c32"</span>)</div><div class='output co'>#&gt; $content
 #&gt; $content[[1]]
 #&gt; $content[[1]]$flavor
 #&gt; [1] "dublincore/episode"
@@ -532,7 +529,7 @@
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
+      <li><a href="#details">Details</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

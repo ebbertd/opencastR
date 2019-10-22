@@ -138,17 +138,38 @@
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
 <span class='fu'>oc_event_acl</span>(<span class='st'>"91df4c57-9631-4a84-b814-d8e9b36a3c32"</span>)</div><div class='output co'>#&gt; $content
-#&gt; list()
+#&gt; $content[[1]]
+#&gt; $content[[1]]$allow
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $content[[1]]$role
+#&gt; [1] "ROLE_ADMIN"
+#&gt; 
+#&gt; $content[[1]]$action
+#&gt; [1] "read"
+#&gt; 
+#&gt; 
+#&gt; $content[[2]]
+#&gt; $content[[2]]$allow
+#&gt; [1] TRUE
+#&gt; 
+#&gt; $content[[2]]$role
+#&gt; [1] "ROLE_ADMIN"
+#&gt; 
+#&gt; $content[[2]]$action
+#&gt; [1] "write"
+#&gt; 
+#&gt; 
 #&gt; 
 #&gt; $url
 #&gt; [1] "https://legacy.opencast.org/api/events/91df4c57-9631-4a84-b814-d8e9b36a3c32/acl"
 #&gt; 
 #&gt; $response
 #&gt; Response [https://legacy.opencast.org/api/events/91df4c57-9631-4a84-b814-d8e9b36a3c32/acl]
-#&gt;   Date: 2019-10-22 18:42
+#&gt;   Date: 2019-10-22 19:01
 #&gt;   Status: 200
 #&gt;   Content-Type: application/v1.2.0+json
-#&gt;   Size: 2 B
+#&gt;   Size: 104 B
 #&gt; &lt;BINARY BODY&gt;
 #&gt; 
 #&gt; attr(,"class")

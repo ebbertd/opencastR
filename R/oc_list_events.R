@@ -1,10 +1,15 @@
-#' Query Opencast for a list of groups
+#' Query Opencast for a list of events
 #'
-#' Returns a list of groups.
+#' Returns a list of events.
 #'
 #' This function expects the hostname, username and password to be set as environment variables.
 #'
-#' @return Returns a list of groups.
+#' @return Returns a list of events.
+#' @param sign Whether public distribution urls should be signed.
+#' @param withacl Whether the acl metadata should be included in the response.
+#' @param withmetadata Whether the metadata catalogs should be included in the response.
+#' @param withscheduling Whether the scheduling information should be included in the response.
+#' @param withpublications Whether the publication ids and urls should be included in the response.
 #' @param filter A comma seperated list of filters to limit the results with. A filter is the filter's name followed by a colon ":" and then the value to filter with so it is the form :.
 #' @param sort Sort the results based upon a list of comma seperated sorting criteria. In the comma seperated list each type of sorting is specified as a pair such as: :ASC or :DESC. Adding the suffix ASC or DESC sets the order as ascending or descending order and is mandatory.
 #' @param limit The maximum number of results to return for a single request.
@@ -16,14 +21,23 @@
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' oc_groups()
-oc_groups <- function(filter = "",
+#' oc_list_events()
+oc_list_events <- function(sign = FALSE,
+                      withacl = FALSE,
+                      withmetadata = FALSE,
+                      withscheduling = FALSE,
+                      withpublications = FALSE,
+                      filter = "",
                       sort = "",
                       limit = 0,
                       offset = 0) {
   # Set the url path
-  path <- "/api/groups/"
+  path <- "/api/events/"
   query <- list(
+    sign = sign,
+    withacl = withacl,
+    withmetadata = withmetadata,
+    withscheduling = withscheduling,
     filter = filter,
     sort = sort,
     limit = limit,
@@ -37,14 +51,14 @@ oc_groups <- function(filter = "",
   oc_package_query(url, query = query)
 }
 
-#' Print result of oc_groups()
+#' Print result of oc_list_events()
 #'
-#' Print a structured return of the oc_groups() function.
+#' Print a structured return of the oc_list_events() function.
 #'
 #' @param x The return of the function this print function relates to.
 #' @param ... Possible further options to the print function.
-#' @return A structured print of the return by the oc_groups() function.
-#' @seealso \code{\link{oc_groups}}
+#' @return A structured print of the return by the oc_list_events() function.
+#' @seealso \code{\link{oc_list_events}}
 #' @importFrom utils str
 #' @export
 #' @examples
@@ -52,10 +66,10 @@ oc_groups <- function(filter = "",
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' resp <- oc_groups()
+#' resp <- oc_list_events()
 #'
 #' resp
-print.oc_groups <- function(x, ...) {
+print.oc_list_events <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)
   invisible(x)
