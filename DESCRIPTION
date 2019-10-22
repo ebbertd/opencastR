@@ -10,8 +10,7 @@ URL: https://github.com/ebbertd/opencastR
 BugReports: https://github.com/ebbertd/opencastR/issues
 Imports:
   httr,
-  jsonlite,
-  RCurl
+  jsonlite
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1

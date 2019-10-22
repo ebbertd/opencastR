@@ -1,10 +1,10 @@
-#' Query Opencast base api
+#' Query Opencast current user
 #'
-#' Returns key characteristics of the API such as the server name and the default version.
+#' Returns information on the logged in user.
 #'
 #' This function expects the hostname, username and password to be set as environment variables.
 #'
-#' @return A list containing the default api version and server url.
+#' @return A list containing the information about the current user.
 #' @import httr
 #' @importFrom jsonlite fromJSON
 #' @export
@@ -13,10 +13,10 @@
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' oc_api()
-oc_api <- function() {
+#' oc_info_me()
+oc_info_me <- function() {
   # Set the url path
-  path <- "/api/"
+  path <- "/api/info/me"
 
   # Construct the url for the api call
   url <- modify_url(oc_hostname(), path = path)
@@ -58,14 +58,14 @@ oc_api <- function() {
   class = "opencast_api")
 }
 
-#' Print result of oc_api()
+#' Print result of oc_info_me()
 #'
-#' Print a structured return of the oc_api() function.
+#' Print a structured return of the oc_info_me() function.
 #'
 #' @param x The return of the function this print function relates to.
 #' @param ... Possible further options to the print function.
-#' @return A structured print of the return by the oc_api() function.
-#' @seealso \code{\link{oc_api}}
+#' @return A structured print of the return by the oc_info_me() function.
+#' @seealso \code{\link{oc_info_me}}
 #' @importFrom utils str
 #' @export
 #' @examples
@@ -73,10 +73,10 @@ oc_api <- function() {
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' resp <- oc_api()
+#' resp <- oc_info_me()
 #'
 #' resp
-print.oc_api <- function(x, ...) {
+print.oc_info_me <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)
   invisible(x)
