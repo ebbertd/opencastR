@@ -1,0 +1,60 @@
+reference:
+  - title: "Base Endpoint"
+    desc: >
+      Provides a location for external apis to query the current server of the API.
+    contents:
+      - oc_api
+      - starts_with("oc_info")
+      - starts_with("oc_version")
+  - title: "Capture Agent Endpoint"
+    desc: >
+      Provides resources and operations related to the capture agents.
+    contents:
+      - starts_with("oc_agent")
+  - title: "Events Endpoint"
+    desc: >
+      Provides resources and operations related to the events.
+    contents:
+      - oc_list_events
+      - starts_with("oc_event")
+  - title: "Groups Endpoint"
+    desc: >
+      Provides resources and operations related to the groups.
+    contents:
+      - oc_list_groups
+      - starts_with("oc_group")
+  - title: "Series Endpoint"
+    desc: >
+      Provides resources and operations related to the series.
+    contents:
+      - oc_list_series
+      - starts_with("oc_series")
+  - title: "Workflow Definitions Endpoint"
+    desc: >
+      Provides resources and operations related to the workflow definitions.
+    contents:
+      - oc_list_workflow_definitions
+      - oc_workflow_definition
+  - title: "Workflow Definitions Endpoint"
+    desc: >
+      Provides resources and operations related to the workflow instances.
+    contents:
+      - oc_list_workflow_instances
+      - oc_workflow_instance
+  - title: "Server Settings"
+    desc: >
+      Provides functions to read the server settings from the environment variables.
+    contents:
+      - oc_hostname
+      - oc_username
+      - oc_password
+  - title: "Internal Functions"
+    desc: >
+      Internal functions needed by the package.
+    contents:
+      - starts_with("oc_package")
+  - title: "Print Functions"
+    desc: >
+      IPrint functions for the opencast api functions.
+    contents:
+      - starts_with("print")

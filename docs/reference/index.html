@@ -117,8 +117,58 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
+          <h2 id="section-base-endpoint" class="hasAnchor"><a href="#section-base-endpoint" class="anchor"></a>Base Endpoint</h2>
+          <p class="section-desc"><p>Provides a location for external apis to query the current server of the API.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="oc_api.html">oc_api()</a></code> </p>
+        </td>
+        <td><p>Query Opencast base api</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="oc_info_me.html">oc_info_me()</a></code> </p>
+        </td>
+        <td><p>Query Opencast current user</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="oc_info_me_roles.html">oc_info_me_roles()</a></code> </p>
+        </td>
+        <td><p>Query Opencast current user's role.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="oc_info_organization.html">oc_info_organization()</a></code> </p>
+        </td>
+        <td><p>Query Opencast current organization</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="oc_info_organization_properties.html">oc_info_organization_properties()</a></code> </p>
+        </td>
+        <td><p>Query Opencast current organization's properties</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="oc_version.html">oc_version()</a></code> </p>
+        </td>
+        <td><p>Query Opencast api versions</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="oc_version_default.html">oc_version_default()</a></code> </p>
+        </td>
+        <td><p>Query Opencast default api versions</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-capture-agent-endpoint" class="hasAnchor"><a href="#section-capture-agent-endpoint" class="anchor"></a>Capture Agent Endpoint</h2>
+          <p class="section-desc"><p>Provides resources and operations related to the capture agents.</p></p>
         </th>
       </tr>
       <tr>
@@ -133,12 +183,20 @@
           <p><code><a href="oc_agents.html">oc_agents()</a></code> </p>
         </td>
         <td><p>Query Opencast list of capture agent</p></td>
-      </tr><tr>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-events-endpoint" class="hasAnchor"><a href="#section-events-endpoint" class="anchor"></a>Events Endpoint</h2>
+          <p class="section-desc"><p>Provides resources and operations related to the events.</p></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
-          <p><code><a href="oc_api.html">oc_api()</a></code> </p>
+          <p><code><a href="oc_list_events.html">oc_list_events()</a></code> </p>
         </td>
-        <td><p>Query Opencast base api</p></td>
+        <td><p>Query Opencast for a list of events</p></td>
       </tr><tr>
         
         <td>
@@ -175,49 +233,15 @@
           <p><code><a href="oc_event_scheduling.html">oc_event_scheduling()</a></code> </p>
         </td>
         <td><p>Query Opencast for a specific events scheduling</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_group.html">oc_group()</a></code> </p>
-        </td>
-        <td><p>Query Opencast for a specific group</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_hostname.html">oc_hostname()</a></code> </p>
-        </td>
-        <td><p>Opencast hostname</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_info_me.html">oc_info_me()</a></code> </p>
-        </td>
-        <td><p>Query Opencast current user</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_info_me_roles.html">oc_info_me_roles()</a></code> </p>
-        </td>
-        <td><p>Query Opencast current user's role.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_info_organization.html">oc_info_organization()</a></code> </p>
-        </td>
-        <td><p>Query Opencast current organization</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_info_organization_properties.html">oc_info_organization_properties()</a></code> </p>
-        </td>
-        <td><p>Query Opencast current organization's properties</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_list_events.html">oc_list_events()</a></code> </p>
-        </td>
-        <td><p>Query Opencast for a list of events</p></td>
-      </tr><tr>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-groups-endpoint" class="hasAnchor"><a href="#section-groups-endpoint" class="anchor"></a>Groups Endpoint</h2>
+          <p class="section-desc"><p>Provides resources and operations related to the groups.</p></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
           <p><code><a href="oc_list_groups.html">oc_list_groups()</a></code> </p>
@@ -226,39 +250,23 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="oc_group.html">oc_group()</a></code> </p>
+        </td>
+        <td><p>Query Opencast for a specific group</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-series-endpoint" class="hasAnchor"><a href="#section-series-endpoint" class="anchor"></a>Series Endpoint</h2>
+          <p class="section-desc"><p>Provides resources and operations related to the series.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
           <p><code><a href="oc_list_series.html">oc_list_series()</a></code> </p>
         </td>
         <td><p>Query Opencast for a list of series</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_list_workflow_definitions.html">oc_list_workflow_definitions()</a></code> </p>
-        </td>
-        <td><p>Query Opencast for the list of workflow definitions</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_list_workflow_instances.html">oc_list_workflow_instances()</a></code> </p>
-        </td>
-        <td><p>Query Opencast for the list of workflow instances</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_package_query.html">oc_package_query()</a></code> </p>
-        </td>
-        <td><p>opencastR query function</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_package_useragent.html">oc_package_useragent()</a></code> </p>
-        </td>
-        <td><p>opencastR user agent</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_password.html">oc_password()</a></code> </p>
-        </td>
-        <td><p>Opencast password</p></td>
       </tr><tr>
         
         <td>
@@ -283,6 +291,60 @@
           <p><code><a href="oc_series_properties.html">oc_series_properties()</a></code> </p>
         </td>
         <td><p>Query Opencast for a specific series properties</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-workflow-definitions-endpoint" class="hasAnchor"><a href="#section-workflow-definitions-endpoint" class="anchor"></a>Workflow Definitions Endpoint</h2>
+          <p class="section-desc"><p>Provides resources and operations related to the workflow definitions.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="oc_list_workflow_definitions.html">oc_list_workflow_definitions()</a></code> </p>
+        </td>
+        <td><p>Query Opencast for the list of workflow definitions</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="oc_workflow_definition.html">oc_workflow_definition()</a></code> </p>
+        </td>
+        <td><p>Query Opencast for a specific workflow definition</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-workflow-definitions-endpoint" class="hasAnchor"><a href="#section-workflow-definitions-endpoint" class="anchor"></a>Workflow Definitions Endpoint</h2>
+          <p class="section-desc"><p>Provides resources and operations related to the workflow instances.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="oc_list_workflow_instances.html">oc_list_workflow_instances()</a></code> </p>
+        </td>
+        <td><p>Query Opencast for the list of workflow instances</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="oc_workflow_instance.html">oc_workflow_instance()</a></code> </p>
+        </td>
+        <td><p>Query Opencast for a specific workflow instance</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-server-settings" class="hasAnchor"><a href="#section-server-settings" class="anchor"></a>Server Settings</h2>
+          <p class="section-desc"><p>Provides functions to read the server settings from the environment variables.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="oc_hostname.html">oc_hostname()</a></code> </p>
+        </td>
+        <td><p>Opencast hostname</p></td>
       </tr><tr>
         
         <td>
@@ -292,28 +354,38 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="oc_version.html">oc_version()</a></code> </p>
+          <p><code><a href="oc_password.html">oc_password()</a></code> </p>
         </td>
-        <td><p>Query Opencast api versions</p></td>
+        <td><p>Opencast password</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-internal-functions" class="hasAnchor"><a href="#section-internal-functions" class="anchor"></a>Internal Functions</h2>
+          <p class="section-desc"><p>Internal functions needed by the package.</p></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="oc_package_query.html">oc_package_query()</a></code> </p>
+        </td>
+        <td><p>opencastR query function</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="oc_version_default.html">oc_version_default()</a></code> </p>
+          <p><code><a href="oc_package_useragent.html">oc_package_useragent()</a></code> </p>
         </td>
-        <td><p>Query Opencast default api versions</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_workflow_definition.html">oc_workflow_definition()</a></code> </p>
-        </td>
-        <td><p>Query Opencast for a specific workflow definition</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="oc_workflow_instance.html">oc_workflow_instance()</a></code> </p>
-        </td>
-        <td><p>Query Opencast for a specific workflow instance</p></td>
-      </tr><tr>
+        <td><p>opencastR user agent</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-print-functions" class="hasAnchor"><a href="#section-print-functions" class="anchor"></a>Print Functions</h2>
+          <p class="section-desc"><p>IPrint functions for the opencast api functions.</p></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
           <p><code><a href="print.oc_agent.html">print(<i>&lt;oc_agent&gt;</i>)</a></code> </p>
@@ -483,7 +555,16 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-base-endpoint">Base Endpoint</a></li>
+      <li><a href="#section-capture-agent-endpoint">Capture Agent Endpoint</a></li>
+      <li><a href="#section-events-endpoint">Events Endpoint</a></li>
+      <li><a href="#section-groups-endpoint">Groups Endpoint</a></li>
+      <li><a href="#section-series-endpoint">Series Endpoint</a></li>
+      <li><a href="#section-workflow-definitions-endpoint">Workflow Definitions Endpoint</a></li>
+      <li><a href="#section-workflow-definitions-endpoint">Workflow Definitions Endpoint</a></li>
+      <li><a href="#section-server-settings">Server Settings</a></li>
+      <li><a href="#section-internal-functions">Internal Functions</a></li>
+      <li><a href="#section-print-functions">Print Functions</a></li>
     </ul>
   </div>
 </div>
