@@ -4,6 +4,10 @@
 
 opencastR is a R package that is designed to read information from the external API of an [Opencast](http://www.opencast.org/) server.
 
+## Status
+
+At the moment only the GET functions are implemented.
+
 ## Installation
 
 The easiest way to get opencastR is to install it using the devtools:
