@@ -6,18 +6,17 @@
 #' @seealso \code{\link{oc_hostname}} \code{\link{oc_password}}
 #' @export
 #' @examples
-#' # Set the environment variable
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
 #'
-#' # Read out the environment variable
-#' oc_username()
+#' # oc_username()
 oc_username <- function() {
   # Get Opencast username from system environment variable
-  oc_username <- Sys.getenv('OPENCAST_USERNAME')
+  oc_username <- Sys.getenv("OPENCAST_USERNAME")
   # Return an error if the environment variable is not set
   if (identical(oc_username, "")) {
     stop("Please set env var OPENCAST_USERNAME to your Opencast username.",
-         call. = FALSE)
+      call. = FALSE
+    )
   }
   # Return the Opencast username
   oc_username

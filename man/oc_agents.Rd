@@ -21,9 +21,9 @@ Returns a list of agents.
 This function expects the hostname, username and password to be set as environment variables.
 }
 \examples{
-Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-Sys.setenv(OPENCAST_USERNAME = "admin")
-Sys.setenv(OPENCAST_PASSWORD = "opencast")
+# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-oc_agents()
+# oc_agents()
 }

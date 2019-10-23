@@ -13,11 +13,12 @@
 #' oc_hostname()
 oc_hostname <- function() {
   # Get Opencast host from system environment variable
-  oc_hostname <- Sys.getenv('OPENCAST_HOST')
+  oc_hostname <- Sys.getenv("OPENCAST_HOST")
   # Return an error if the environment variable is not set
   if (identical(oc_hostname, "")) {
     stop("Please set env var OPENCAST_HOST to your Opencast host.",
-         call. = FALSE)
+      call. = FALSE
+    )
   }
   # Return the Opencast host
   oc_hostname

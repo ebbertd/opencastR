@@ -10,16 +10,18 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' oc_agents()
+#' # oc_agents()
 oc_agents <- function(limit = 0, offset = 0) {
   # Set the url path
   path <- "/api/agents/"
-  query <- list(limit = limit,
-                offset = offset)
+  query <- list(
+    limit = limit,
+    offset = offset
+  )
 
   # Construct the url for the api call
   url <- modify_url(oc_hostname(), path = path)
@@ -39,13 +41,13 @@ oc_agents <- function(limit = 0, offset = 0) {
 #' @importFrom utils str
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' resp <- oc_agents()
+#' # resp <- oc_agents()
 #'
-#' resp
+#' # resp
 print.oc_agents <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

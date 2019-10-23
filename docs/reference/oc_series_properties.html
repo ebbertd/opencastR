@@ -133,26 +133,12 @@
     <p>This function expects the hostname, username and password to be set as environment variables.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
+    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-<span class='fu'>oc_series_properties</span>(<span class='st'>"446eed07-853b-4865-9813-07e1fb39d2d5"</span>)</div><div class='output co'>#&gt; $content
-#&gt; named list()
-#&gt; 
-#&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/series/446eed07-853b-4865-9813-07e1fb39d2d5/properties"
-#&gt; 
-#&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/series/446eed07-853b-4865-9813-07e1fb39d2d5/properties]
-#&gt;   Date: 2019-10-22 19:01
-#&gt;   Status: 200
-#&gt;   Content-Type: application/v1.2.0+json
-#&gt;   Size: 2 B
-#&gt; &lt;BINARY BODY&gt;
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "opencast_api"</div></pre>
+# oc_series_properties("446eed07-853b-4865-9813-07e1fb39d2d5")
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

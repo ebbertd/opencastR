@@ -14,11 +14,11 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' oc_event("91df4c57-9631-4a84-b814-d8e9b36a3c32")
+#' # oc_event("91df4c57-9631-4a84-b814-d8e9b36a3c32")
 oc_event <- function(eventId = "",
                      sign = FALSE,
                      withacl = FALSE,
@@ -58,13 +58,13 @@ oc_event <- function(eventId = "",
 #' @importFrom utils str
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' resp <- oc_event("91df4c57-9631-4a84-b814-d8e9b36a3c32")
+#' # resp <- oc_event("91df4c57-9631-4a84-b814-d8e9b36a3c32")
 #'
-#' resp
+#' # resp
 print.oc_event <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

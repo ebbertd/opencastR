@@ -138,67 +138,14 @@
     <div class='dont-index'><p><code><a href='oc_list_series.html'>oc_list_series</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
+    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_list_series.html'>oc_list_series</a></span>()
+# resp <- oc_list_series()
 
-<span class='no'>resp</span></div><div class='output co'>#&gt; $content
-#&gt; $content[[1]]
-#&gt; $content[[1]]$identifier
-#&gt; [1] "446eed07-853b-4865-9813-07e1fb39d2d5"
-#&gt; 
-#&gt; $content[[1]]$license
-#&gt; [1] ""
-#&gt; 
-#&gt; $content[[1]]$creator
-#&gt; [1] "System User"
-#&gt; 
-#&gt; $content[[1]]$created
-#&gt; [1] "2019-10-22T00:05:00Z"
-#&gt; 
-#&gt; $content[[1]]$subjects
-#&gt; list()
-#&gt; 
-#&gt; $content[[1]]$organizers
-#&gt; list()
-#&gt; 
-#&gt; $content[[1]]$description
-#&gt; [1] ""
-#&gt; 
-#&gt; $content[[1]]$publishers
-#&gt; $content[[1]]$publishers[[1]]
-#&gt; [1] "Blender Foundation"
-#&gt; 
-#&gt; 
-#&gt; $content[[1]]$language
-#&gt; [1] ""
-#&gt; 
-#&gt; $content[[1]]$contributors
-#&gt; list()
-#&gt; 
-#&gt; $content[[1]]$title
-#&gt; [1] "Blender Foundation Productions"
-#&gt; 
-#&gt; $content[[1]]$rightsholder
-#&gt; [1] ""
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/series/"
-#&gt; 
-#&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/series/?filter=&amp;sort=&amp;limit=0&amp;offset=0]
-#&gt;   Date: 2019-10-22 19:01
-#&gt;   Status: 200
-#&gt;   Content-Type: application/v1.2.0+json
-#&gt;   Size: 299 B
-#&gt; &lt;BINARY BODY&gt;
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "opencast_api"</div></pre>
+# resp
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

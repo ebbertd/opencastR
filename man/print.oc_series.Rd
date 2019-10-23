@@ -18,13 +18,13 @@ A structured print of the return by the oc_series() function.
 Print a structured return of the oc_series() function.
 }
 \examples{
-Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-Sys.setenv(OPENCAST_USERNAME = "admin")
-Sys.setenv(OPENCAST_PASSWORD = "opencast")
+# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-resp <- oc_series("446eed07-853b-4865-9813-07e1fb39d2d5")
+# resp <- oc_series("446eed07-853b-4865-9813-07e1fb39d2d5")
 
-resp
+# resp
 }
 \seealso{
 \code{\link{oc_series}}

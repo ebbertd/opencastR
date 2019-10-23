@@ -138,100 +138,14 @@
     <div class='dont-index'><p><code><a href='oc_event.html'>oc_event</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
+    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_event.html'>oc_event</a></span>(<span class='st'>"91df4c57-9631-4a84-b814-d8e9b36a3c32"</span>)
+# resp <- oc_event("91df4c57-9631-4a84-b814-d8e9b36a3c32")
 
-<span class='no'>resp</span></div><div class='output co'>#&gt; $content
-#&gt; $content$identifier
-#&gt; [1] "91df4c57-9631-4a84-b814-d8e9b36a3c32"
-#&gt; 
-#&gt; $content$creator
-#&gt; [1] "System User"
-#&gt; 
-#&gt; $content$presenter
-#&gt; $content$presenter[[1]]
-#&gt; [1] "Durian Open Movie Team"
-#&gt; 
-#&gt; 
-#&gt; $content$created
-#&gt; [1] "2019-10-22T00:06:00Z"
-#&gt; 
-#&gt; $content$is_part_of
-#&gt; [1] "446eed07-853b-4865-9813-07e1fb39d2d5"
-#&gt; 
-#&gt; $content$subjects
-#&gt; list()
-#&gt; 
-#&gt; $content$start
-#&gt; [1] "2019-10-22T00:06:16Z"
-#&gt; 
-#&gt; $content$description
-#&gt; [1] "Trailer for the Sintel open movie project"
-#&gt; 
-#&gt; $content$language
-#&gt; [1] ""
-#&gt; 
-#&gt; $content$source
-#&gt; [1] ""
-#&gt; 
-#&gt; $content$title
-#&gt; [1] "Sintel Trailer"
-#&gt; 
-#&gt; $content$processing_state
-#&gt; [1] "SUCCEEDED"
-#&gt; 
-#&gt; $content$license
-#&gt; [1] ""
-#&gt; 
-#&gt; $content$archive_version
-#&gt; [1] 2
-#&gt; 
-#&gt; $content$contributor
-#&gt; list()
-#&gt; 
-#&gt; $content$series
-#&gt; [1] "Blender Foundation Productions"
-#&gt; 
-#&gt; $content$has_previews
-#&gt; [1] TRUE
-#&gt; 
-#&gt; $content$location
-#&gt; [1] ""
-#&gt; 
-#&gt; $content$rightsholder
-#&gt; [1] ""
-#&gt; 
-#&gt; $content$publication_status
-#&gt; $content$publication_status[[1]]
-#&gt; [1] "internal"
-#&gt; 
-#&gt; $content$publication_status[[2]]
-#&gt; [1] "engage-player"
-#&gt; 
-#&gt; $content$publication_status[[3]]
-#&gt; [1] "oaipmh-default"
-#&gt; 
-#&gt; 
-#&gt; $content$status
-#&gt; [1] "EVENTS.EVENTS.STATUS.PROCESSED"
-#&gt; 
-#&gt; 
-#&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/events/91df4c57-9631-4a84-b814-d8e9b36a3c32"
-#&gt; 
-#&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/events/91df4c57-9631-4a84-b814-d8e9b36a3c32?sign=FALSE&amp;withacl=FALSE&amp;withmetadata=FALSE&amp;withscheduling=FALSE]
-#&gt;   Date: 2019-10-22 19:01
-#&gt;   Status: 200
-#&gt;   Content-Type: application/v1.2.0+json
-#&gt;   Size: 639 B
-#&gt; &lt;BINARY BODY&gt;
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "opencast_api"</div></pre>
+# resp
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

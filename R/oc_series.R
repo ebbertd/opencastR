@@ -5,15 +5,15 @@
 #' This function expects the hostname, username and password to be set as environment variables.
 #'
 #' @return Returns a single series.
-#' @param seriesId The event id
+#' @param seriesId The series id
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' oc_series("446eed07-853b-4865-9813-07e1fb39d2d5")
+#' # oc_series("446eed07-853b-4865-9813-07e1fb39d2d5")
 oc_series <- function(seriesId = "") {
   # Check needed arguments
   if (seriesId == "") {
@@ -41,13 +41,13 @@ oc_series <- function(seriesId = "") {
 #' @importFrom utils str
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' resp <- oc_series("446eed07-853b-4865-9813-07e1fb39d2d5")
+#' # resp <- oc_series("446eed07-853b-4865-9813-07e1fb39d2d5")
 #'
-#' resp
+#' # resp
 print.oc_series <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

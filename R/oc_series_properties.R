@@ -9,11 +9,11 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' oc_series_properties("446eed07-853b-4865-9813-07e1fb39d2d5")
+#' # oc_series_properties("446eed07-853b-4865-9813-07e1fb39d2d5")
 oc_series_properties <- function(seriesId = "") {
   # Check needed arguments
   if (seriesId == "") {
@@ -41,13 +41,13 @@ oc_series_properties <- function(seriesId = "") {
 #' @importFrom utils str
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' resp <- oc_series_properties("446eed07-853b-4865-9813-07e1fb39d2d5")
+#' # resp <- oc_series_properties("446eed07-853b-4865-9813-07e1fb39d2d5")
 #'
-#' resp
+#' # resp
 print.oc_series_properties <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

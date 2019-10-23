@@ -9,15 +9,16 @@
 #' @importFrom jsonlite fromJSON
 #' @export
 #' @examples
-#' oc_package_query()
+#' # oc_package_query()
 oc_package_query <-
   function(url = "https://legacy.opencast.org/api/", query = NULL) {
     # Save api call to variable
     resp <-
       GET(url,
-          query = query,
-          authenticate(oc_username(), oc_password()),
-          oc_package_useragent())
+        query = query,
+        authenticate(oc_username(), oc_password()),
+        oc_package_useragent()
+      )
 
     # Parse the response
     parsed <-
@@ -29,5 +30,6 @@ oc_package_query <-
       url = url,
       response = resp
     ),
-    class = "opencast_api")
+    class = "opencast_api"
+    )
   }

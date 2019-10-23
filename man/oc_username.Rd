@@ -13,11 +13,9 @@ A character string containing the Opencast username.
 This function returns the Opencast username that is set in the environment variable OPENCAST_USERNAME.
 }
 \examples{
-# Set the environment variable
-Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
 
-# Read out the environment variable
-oc_username()
+# oc_username()
 }
 \seealso{
 \code{\link{oc_hostname}} \code{\link{oc_password}}

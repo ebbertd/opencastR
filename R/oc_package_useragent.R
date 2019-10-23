@@ -6,8 +6,7 @@
 #' @import httr
 #' @export
 #' @examples
-#' # Read out the user agent
-#' oc_package_useragent()
+#' # oc_package_useragent()
 oc_package_useragent <- function() {
   ua <- user_agent("http://github.com/ebbertd/opencastR")
   ua

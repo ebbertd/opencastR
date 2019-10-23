@@ -138,73 +138,14 @@
     <div class='dont-index'><p><code><a href='oc_event_list_publications.html'>oc_event_list_publications</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
+    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_event_list_publications.html'>oc_event_list_publications</a></span>(<span class='st'>"91df4c57-9631-4a84-b814-d8e9b36a3c32"</span>)
+# resp <- oc_event_list_publications("91df4c57-9631-4a84-b814-d8e9b36a3c32")
 
-<span class='no'>resp</span></div><div class='output co'>#&gt; $content
-#&gt; $content[[1]]
-#&gt; $content[[1]]$metadata
-#&gt; list()
-#&gt; 
-#&gt; $content[[1]]$attachments
-#&gt; list()
-#&gt; 
-#&gt; $content[[1]]$channel
-#&gt; [1] "engage-player"
-#&gt; 
-#&gt; $content[[1]]$id
-#&gt; [1] "f9b54964-88ca-4078-b79f-1dae5fbc51c5"
-#&gt; 
-#&gt; $content[[1]]$media
-#&gt; list()
-#&gt; 
-#&gt; $content[[1]]$mediatype
-#&gt; [1] "text/html"
-#&gt; 
-#&gt; $content[[1]]$url
-#&gt; [1] "https://legacy.opencast.org/play/91df4c57-9631-4a84-b814-d8e9b36a3c32"
-#&gt; 
-#&gt; 
-#&gt; $content[[2]]
-#&gt; $content[[2]]$metadata
-#&gt; list()
-#&gt; 
-#&gt; $content[[2]]$attachments
-#&gt; list()
-#&gt; 
-#&gt; $content[[2]]$channel
-#&gt; [1] "oaipmh-default"
-#&gt; 
-#&gt; $content[[2]]$id
-#&gt; [1] "7964bdd6-b027-4bf9-91c1-5dec11af4bd5"
-#&gt; 
-#&gt; $content[[2]]$media
-#&gt; list()
-#&gt; 
-#&gt; $content[[2]]$mediatype
-#&gt; [1] "text/xml"
-#&gt; 
-#&gt; $content[[2]]$url
-#&gt; [1] "/oaipmh/default?verb=ListMetadataFormats&amp;identifier=91df4c57-9631-4a84-b814-d8e9b36a3c32"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/events/91df4c57-9631-4a84-b814-d8e9b36a3c32/publications"
-#&gt; 
-#&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/events/91df4c57-9631-4a84-b814-d8e9b36a3c32/publications?sign=FALSE]
-#&gt;   Date: 2019-10-22 19:01
-#&gt;   Status: 200
-#&gt;   Content-Type: application/v1.2.0+json
-#&gt;   Size: 460 B
-#&gt; &lt;BINARY BODY&gt;
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "opencast_api"</div></pre>
+# resp
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

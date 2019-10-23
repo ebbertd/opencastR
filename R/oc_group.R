@@ -9,11 +9,11 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' oc_group("MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS")
+#' # oc_group("MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS")
 oc_group <- function(groupId = "") {
 
   # Check needed arguments
@@ -42,13 +42,13 @@ oc_group <- function(groupId = "") {
 #' @importFrom utils str
 #' @export
 #' @examples
-#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' Sys.setenv(OPENCAST_USERNAME = "admin")
-#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' # Sys.setenv(OPENCAST_USERNAME = "admin")
+#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' resp <- oc_group("MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS")
+#' # resp <- oc_group("MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS")
 #'
-#' resp
+#' # resp
 print.oc_group <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

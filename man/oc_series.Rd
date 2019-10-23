@@ -7,7 +7,7 @@
 oc_series(seriesId = "")
 }
 \arguments{
-\item{seriesId}{The event id}
+\item{seriesId}{The series id}
 }
 \value{
 Returns a single series.
@@ -19,9 +19,9 @@ Returns a single series.
 This function expects the hostname, username and password to be set as environment variables.
 }
 \examples{
-Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-Sys.setenv(OPENCAST_USERNAME = "admin")
-Sys.setenv(OPENCAST_PASSWORD = "opencast")
+# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-oc_series("446eed07-853b-4865-9813-07e1fb39d2d5")
+# oc_series("446eed07-853b-4865-9813-07e1fb39d2d5")
 }

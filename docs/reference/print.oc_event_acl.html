@@ -138,49 +138,14 @@
     <div class='dont-index'><p><code><a href='oc_event_acl.html'>oc_event_acl</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
+    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_event_acl.html'>oc_event_acl</a></span>(<span class='st'>"91df4c57-9631-4a84-b814-d8e9b36a3c32"</span>)
+# resp <- oc_event_acl("91df4c57-9631-4a84-b814-d8e9b36a3c32")
 
-<span class='no'>resp</span></div><div class='output co'>#&gt; $content
-#&gt; $content[[1]]
-#&gt; $content[[1]]$allow
-#&gt; [1] TRUE
-#&gt; 
-#&gt; $content[[1]]$role
-#&gt; [1] "ROLE_ADMIN"
-#&gt; 
-#&gt; $content[[1]]$action
-#&gt; [1] "read"
-#&gt; 
-#&gt; 
-#&gt; $content[[2]]
-#&gt; $content[[2]]$allow
-#&gt; [1] TRUE
-#&gt; 
-#&gt; $content[[2]]$role
-#&gt; [1] "ROLE_ADMIN"
-#&gt; 
-#&gt; $content[[2]]$action
-#&gt; [1] "write"
-#&gt; 
-#&gt; 
-#&gt; 
-#&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/events/91df4c57-9631-4a84-b814-d8e9b36a3c32/acl"
-#&gt; 
-#&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/events/91df4c57-9631-4a84-b814-d8e9b36a3c32/acl]
-#&gt;   Date: 2019-10-22 19:01
-#&gt;   Status: 200
-#&gt;   Content-Type: application/v1.2.0+json
-#&gt;   Size: 104 B
-#&gt; &lt;BINARY BODY&gt;
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "opencast_api"</div></pre>
+# resp
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

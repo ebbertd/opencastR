@@ -18,13 +18,13 @@ A structured print of the return by the oc_list_events() function.
 Print a structured return of the oc_list_events() function.
 }
 \examples{
-Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-Sys.setenv(OPENCAST_USERNAME = "admin")
-Sys.setenv(OPENCAST_PASSWORD = "opencast")
+# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+# Sys.setenv(OPENCAST_USERNAME = "admin")
+# Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-resp <- oc_list_events()
+# resp <- oc_list_events()
 
-resp
+# resp
 }
 \seealso{
 \code{\link{oc_list_events}}
