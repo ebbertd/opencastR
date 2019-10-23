@@ -22,7 +22,7 @@ oc_package_query <-
 
     # Parse the response
     parsed <-
-      fromJSON(content(resp, "text", encoding = "UTF-8"), simplifyVector = FALSE)
+      fromJSON(content(resp, "text", encoding = "UTF-8"), simplifyDataFrame = TRUE)
 
     # Structure the return
     structure(list(
