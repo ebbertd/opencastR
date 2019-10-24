@@ -1,15 +1,21 @@
-Package: opencastR
 Type: Package
-Title: Query the Opencast external API
-Version: 0.0.1
-Author: Daniel Ebbert
-Maintainer: Daniel Ebbert <daniel@ebbert.nl>
-Description: This package is designed for reading data from the Opencast external API.
-Imports:
-    jsonlite,
-    RCurl
-License: ECL-2.0
+Package: opencastR
+Title: Opencast External API Package
+Version: 0.1.0
+Authors@R: c(
+  person("Daniel", "Ebbert", email = "daniel.ebbert@uni-muenster.de", role = c("cre", "aut"), comment = c(ORCID = "0000-0003-3666-7205")))
+Description: Query the external API of a Opencast video management server for information related to the recorded videos.
+License: Apache License (>= 2.0)
+URL: https://github.com/ebbertd/opencastR
+BugReports: https://github.com/ebbertd/opencastR/issues
+Imports: 
+  httr,
+  jsonlite
 Encoding: UTF-8
 LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
+VignetteBuilder: knitr
+Suggests: 
+  knitr,
+  rmarkdown,
+  testthat (>= 2.1.0)

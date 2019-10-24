@@ -1,0 +1,56 @@
+---
+title: "Getting started"
+author: "Daniel Ebbert"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(knitr)
+```
+
+This vignette describes how to get started using the opencastR package.
+
+## Setup
+
+In order to use the opencastR package the hostname of your Opencast server, your username and password need to be set as environment variables. For this example I use the Legacy Opencast Testserver and the default credentials.
+
+```{r oc_setup}
+library(opencastR)
+
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
+```
+
+## First call
+
+To check if everything is setup correctly the oc_api function can be used which returns the default api version and the server url.
+
+```{r oc_api}
+oc_api()
+```
+
+The return of this functions shows that a list of the class *opencast_api* has been returned. This list contains three elements. The content, the url that was called and the full response. So access only the content we can do the following.
+
+```{r oc_api_content}
+api_test <- oc_api()
+api_test$content
+```
+
+## Events
+
+To showcase a more useful functions a list of events on the testserver can be retrieved.
+
+```{r oc_events_content}
+events <- oc_list_events()
+kable(events$content)
+```
