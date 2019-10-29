@@ -9,11 +9,11 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # oc_workflow_definition("schedule-and-upload")
+#' oc_workflow_definition("schedule-and-upload")
 oc_workflow_definition <- function(workflowDefinitionId = "") {
   # Check needed arguments
   if (workflowDefinitionId == "") {
@@ -41,13 +41,13 @@ oc_workflow_definition <- function(workflowDefinitionId = "") {
 #' @importFrom utils str
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # resp <- oc_workflow_definition("schedule-and-upload")
+#' resp <- oc_workflow_definition("schedule-and-upload")
 #'
-#' # resp
+#' resp
 print.oc_workflow_definition <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

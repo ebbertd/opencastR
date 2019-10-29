@@ -18,13 +18,17 @@ A structured print of the return by the oc_series_acl() function.
 Print a structured return of the oc_series_acl() function.
 }
 \examples{
-# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+\donttest{
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-# resp <- oc_series_acl("446eed07-853b-4865-9813-07e1fb39d2d5")
+series <- oc_list_series()
 
-# resp
+resp <- oc_series_acl(series$content$identifier[1])
+
+resp
+}
 }
 \seealso{
 \code{\link{oc_series_acl}}

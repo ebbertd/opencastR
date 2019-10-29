@@ -18,13 +18,13 @@ A structured print of the return by the oc_info_organization_properties() functi
 Print a structured return of the oc_info_organization_properties() function.
 }
 \examples{
-# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-# resp <- oc_info_organization_properties()
+resp <- oc_info_organization_properties()
 
-# resp
+resp
 }
 \seealso{
 \code{\link{oc_info_organization_properties}}

@@ -8,11 +8,11 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # oc_info_me_roles()
+#' oc_info_me_roles()
 oc_info_me_roles <- function() {
   # Set the url path
   path <- "/api/info/me/roles"
@@ -35,13 +35,13 @@ oc_info_me_roles <- function() {
 #' @importFrom utils str
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # resp <- oc_info_me_roles()
+#' resp <- oc_info_me_roles()
 #'
-#' # resp
+#' resp
 print.oc_info_me_roles <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

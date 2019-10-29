@@ -18,13 +18,15 @@ A structured print of the return by the oc_agent() function.
 Print a structured return of the oc_agent() function.
 }
 \examples{
-# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-# resp <- oc_agent("SMP")
+agents <- oc_list_agents()
 
-# resp
+resp <- oc_agent(agents$content$agent_id)
+
+resp
 }
 \seealso{
 \code{\link{oc_agent}}

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Print result of oc_info_me_roles() — print.oc_info_me_roles • opencastR</title>
+<title>Query Opencast list of capture agent — oc_list_agents • opencastR</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Print result of oc_info_me_roles() — print.oc_info_me_roles" />
-<meta property="og:description" content="Print a structured return of the oc_info_me_roles() function." />
+<meta property="og:title" content="Query Opencast list of capture agent — oc_list_agents" />
+<meta property="og:description" content="Returns a list of agents." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -115,64 +115,56 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Print result of oc_info_me_roles()</h1>
+    <h1>Query Opencast list of capture agent</h1>
     
-    <div class="hidden name"><code>print.oc_info_me_roles.Rd</code></div>
+    <div class="hidden name"><code>oc_list_agents.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Print a structured return of the oc_info_me_roles() function.</p>
+    <p>Returns a list of agents.</p>
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for oc_info_me_roles</span>
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>oc_list_agents</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>The return of the function this print function relates to.</p></td>
+      <th>limit</th>
+      <td><p>The maximum number of results to return for a single request.</p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>Possible further options to the print function.</p></td>
+      <th>offset</th>
+      <td><p>The index of the first result to return.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A structured print of the return by the oc_info_me_roles() function.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <p>A list containing the capture agents</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <div class='dont-index'><p><code><a href='oc_info_me_roles.html'>oc_info_me_roles</a></code></p></div>
+    <p>This function expects the hostname, username and password to be set as environment variables.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_info_me_roles.html'>oc_info_me_roles</a></span>()
-
-<span class='no'>resp</span></div><div class='output co'>#&gt; $content
-#&gt; [1] "ROLE_USER"                              
-#&gt; [2] "ROLE_GROUP_MH_DEFAULT_ORG_SYSTEM_ADMINS"
-#&gt; [3] "ROLE_ADMIN"                             
-#&gt; [4] "ROLE_SUDO"                              
-#&gt; [5] "ROLE_ANONYMOUS"                         
-#&gt; [6] "ROLE_USER_ADMIN"                        
-#&gt; [7] "ROLE_OAUTH_USER"                        
+<span class='fu'>oc_list_agents</span>()</div><div class='output co'>#&gt; $content
+#&gt;   agent_id   inputs               update                    url status
+#&gt; 1      SMP defaults 2019-10-29T15:08:14Z http://192.168.100.251   idle
 #&gt; 
 #&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/info/me/roles"
+#&gt; [1] "https://legacy.opencast.org/api/agents/"
 #&gt; 
 #&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/info/me/roles]
+#&gt; Response [https://legacy.opencast.org/api/agents/?limit=0&amp;offset=0]
 #&gt;   Date: 2019-10-29 15:08
 #&gt;   Status: 200
-#&gt;   Content-Type: application/json
-#&gt;   Size: 133 B
-#&gt; 
+#&gt;   Content-Type: application/v1.2.0+json
+#&gt;   Size: 123 B
+#&gt; &lt;BINARY BODY&gt;
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "opencast_api"</div></pre>
@@ -182,7 +174,7 @@
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
+      <li><a href="#details">Details</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

@@ -12,11 +12,11 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # oc_list_series()
+#' oc_list_series()
 oc_list_series <- function(filter = "",
                            sort = "",
                            limit = 0,
@@ -48,13 +48,13 @@ oc_list_series <- function(filter = "",
 #' @importFrom utils str
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # resp <- oc_list_series()
+#' resp <- oc_list_series()
 #'
-#' # resp
+#' resp
 print.oc_list_series <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

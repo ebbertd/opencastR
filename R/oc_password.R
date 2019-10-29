@@ -6,9 +6,9 @@
 #' @seealso \code{\link{oc_hostname}} \code{\link{oc_username}}
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # oc_password()
+#' oc_password()
 oc_password <- function() {
   # Get Opencast password from system environment variable
   oc_password <- Sys.getenv("OPENCAST_PASSWORD")

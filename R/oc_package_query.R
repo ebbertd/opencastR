@@ -9,7 +9,7 @@
 #' @importFrom jsonlite fromJSON
 #' @export
 #' @examples
-#' # oc_package_query()
+#' oc_package_query()
 oc_package_query <-
   function(url = "https://legacy.opencast.org/api/", query = NULL) {
     # Save api call to variable

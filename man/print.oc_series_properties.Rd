@@ -18,13 +18,15 @@ A structured print of the return by the oc_series_properties() function.
 Print a structured return of the oc_series_properties() function.
 }
 \examples{
-# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-# resp <- oc_series_properties("446eed07-853b-4865-9813-07e1fb39d2d5")
+series <- oc_list_series()
 
-# resp
+resp <- oc_series_properties(series$content$identifier[1])
+
+resp
 }
 \seealso{
 \code{\link{oc_series_properties}}

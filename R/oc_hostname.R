@@ -6,10 +6,8 @@
 #' @seealso \code{\link{oc_username}} \code{\link{oc_password}}
 #' @export
 #' @examples
-#' # Set the environment variable
 #' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
 #'
-#' # Read out the environment variable
 #' oc_hostname()
 oc_hostname <- function() {
   # Get Opencast host from system environment variable

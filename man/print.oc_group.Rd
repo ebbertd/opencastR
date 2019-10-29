@@ -18,13 +18,13 @@ A structured print of the return by the oc_group() function.
 Print a structured return of the oc_group() function.
 }
 \examples{
-# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-# resp <- oc_group("MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS")
+resp <- oc_group("MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS")
 
-# resp
+resp
 }
 \seealso{
 \code{\link{oc_group}}

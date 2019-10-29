@@ -21,9 +21,11 @@ Returns the event's metadata of the specified type.
 This function expects the hostname, username and password to be set as environment variables.
 }
 \examples{
-# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-# oc_event_metadata("91df4c57-9631-4a84-b814-d8e9b36a3c32")
+events <- oc_list_events()
+
+oc_event_metadata(events$content$identifier[1])
 }

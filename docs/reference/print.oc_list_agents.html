@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Print result of oc_info_organization_properties() — print.oc_info_organization_properties • opencastR</title>
+<title>Print result of oc_list_agents() — print.oc_list_agents • opencastR</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Print result of oc_info_organization_properties() — print.oc_info_organization_properties" />
-<meta property="og:description" content="Print a structured return of the oc_info_organization_properties() function." />
+<meta property="og:title" content="Print result of oc_list_agents() — print.oc_list_agents" />
+<meta property="og:description" content="Print a structured return of the oc_list_agents() function." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -115,16 +115,16 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Print result of oc_info_organization_properties()</h1>
+    <h1>Print result of oc_list_agents()</h1>
     
-    <div class="hidden name"><code>print.oc_info_organization_properties.Rd</code></div>
+    <div class="hidden name"><code>print.oc_list_agents.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Print a structured return of the oc_info_organization_properties() function.</p>
+    <p>Print a structured return of the oc_list_agents() function.</p>
     </div>
 
-    <pre class="usage"><span class='co'># S3 method for oc_info_organization_properties</span>
+    <pre class="usage"><span class='co'># S3 method for oc_list_agents</span>
 <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -142,219 +142,32 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A structured print of the return by the oc_info_organization_properties() function.</p>
+    <p>A structured print of the return by the oc_list_agents() function.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><code><a href='oc_info_organization_properties.html'>oc_info_organization_properties</a></code></p></div>
+    <div class='dont-index'><p><code><a href='oc_list_agents.html'>oc_list_agents</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_info_organization_properties.html'>oc_info_organization_properties</a></span>()
+<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_list_agents.html'>oc_list_agents</a></span>()
 
 <span class='no'>resp</span></div><div class='output co'>#&gt; $content
-#&gt; $content$admin.shortcut.general.series_view
-#&gt; [1] "s"
-#&gt; 
-#&gt; $content$admin.shortcut.editor.split_at_current_time
-#&gt; [1] "v"
-#&gt; 
-#&gt; $content$player.shortcut.controls.nextChapter
-#&gt; [1] "pageup"
-#&gt; 
-#&gt; $content$admin.shortcut.player.mute
-#&gt; [1] "m"
-#&gt; 
-#&gt; $content$admin.shortcut.general.select_previous_dashboard_filter
-#&gt; [1] "F"
-#&gt; 
-#&gt; $content$player.shortcut.controls.jumpToBegin
-#&gt; [1] "backspace"
-#&gt; 
-#&gt; $content$admin.shortcut.editor.play_ending_of_current_segment
-#&gt; [1] "n"
-#&gt; 
-#&gt; $content$player.mastervideotype
-#&gt; [1] "presenter/delivery"
-#&gt; 
-#&gt; $content$player.shortcut.layout.focusPrev
-#&gt; [1] "&lt;"
-#&gt; 
-#&gt; $content$org.opencastproject.admin.help.documentation.url
-#&gt; [1] "http://docs.opencast.org"
-#&gt; 
-#&gt; $content$player.shortcut.controls.prevChapter
-#&gt; [1] "pagedown"
-#&gt; 
-#&gt; $content$player.positioncontrols
-#&gt; [1] "bottom"
-#&gt; 
-#&gt; $content$player.shortcut.zoom.moveLeft
-#&gt; [1] "a"
-#&gt; 
-#&gt; $content$admin.shortcut.general.event_view
-#&gt; [1] "e"
-#&gt; 
-#&gt; $content$admin.shortcut.editor.clear_list
-#&gt; [1] "ctrl+backspace"
-#&gt; 
-#&gt; $content$adminui.user.external_role_display
-#&gt; [1] "false"
-#&gt; 
-#&gt; $content$org.opencastproject.admin.help.restdocs.url
-#&gt; [1] "/rest_docs.html"
-#&gt; 
-#&gt; $content$logo_mediamodule
-#&gt; [1] "/engage/ui/img/logo/opencast-icon.svg"
-#&gt; 
-#&gt; $content$admin.shortcut.general.new_series
-#&gt; [1] "N"
-#&gt; 
-#&gt; $content$player.shortcut.zoom.moveRight
-#&gt; [1] "d"
-#&gt; 
-#&gt; $content$player.shortcut.layout.movePiP
-#&gt; [1] "p"
-#&gt; 
-#&gt; $content$player.hide_video_context_menu
-#&gt; [1] "false"
-#&gt; 
-#&gt; $content$player.shortcut.playbackrate.decrease
-#&gt; [1] "T"
-#&gt; 
-#&gt; $content$admin.shortcut.general.select_next_dashboard_filter
-#&gt; [1] "f"
-#&gt; 
-#&gt; $content$player.shortcut.zoom.in
-#&gt; [1] "plus"
-#&gt; 
-#&gt; $content$admin.shortcut.player.next_segment
-#&gt; [1] "down"
-#&gt; 
-#&gt; $content$admin.shortcut.general.new_event
-#&gt; [1] "n"
-#&gt; 
-#&gt; $content$player.shortcut.controls.playPause
-#&gt; [1] "space"
-#&gt; 
-#&gt; $content$admin.shortcut.player.next_frame
-#&gt; [1] "right"
-#&gt; 
-#&gt; $content$player.shortcut.fullscreen.cancel
-#&gt; [1] "escape"
-#&gt; 
-#&gt; $content$org.opencastproject.admin.mediamodule.url
-#&gt; [1] "/engage/ui"
-#&gt; 
-#&gt; $content$player.focusedflavor
-#&gt; [1] "presentation"
-#&gt; 
-#&gt; $content$player.allowedtags
-#&gt; [1] "engage-download,engage-streaming"
-#&gt; 
-#&gt; $content$player.shortcut.zoom.moveUp
-#&gt; [1] "w"
-#&gt; 
-#&gt; $content$player.shortcut.zoom.out
-#&gt; [1] "-"
-#&gt; 
-#&gt; $content$player.shortcut.layout.focusNext
-#&gt; [1] "&gt;"
-#&gt; 
-#&gt; $content$`player.shortcut-sequence`
-#&gt; [1] "controls,volume,playbackrate,layout,zoom,fullscreen"
-#&gt; 
-#&gt; $content$player.shortcut.controls.seekLeft
-#&gt; [1] "left"
-#&gt; 
-#&gt; $content$player.shortcut.playbackrate.increase
-#&gt; [1] "t"
-#&gt; 
-#&gt; $content$`admin.shortcut.editor.play_current_segment_with_pre-roll`
-#&gt; [1] "C"
-#&gt; 
-#&gt; $content$player.shortcut.volume.up
-#&gt; [1] "9"
-#&gt; 
-#&gt; $content$admin.shortcut.editor.cut_selected_segment
-#&gt; [1] "backspace"
-#&gt; 
-#&gt; $content$admin.shortcut.player.step_backward
-#&gt; [1] "ctrl+left"
-#&gt; 
-#&gt; $content$player.shortcut.controls.seekRight
-#&gt; [1] "right"
-#&gt; 
-#&gt; $content$admin.shortcut.editor.play_current_segment
-#&gt; [1] "c"
-#&gt; 
-#&gt; $content$logo_player
-#&gt; [1] "/engage/theodul/ui/img/opencast.svg"
-#&gt; 
-#&gt; $content$admin.shortcut.general.remove_filters
-#&gt; [1] "r"
-#&gt; 
-#&gt; $content$player.shortcut.volume.down
-#&gt; [1] "8"
-#&gt; 
-#&gt; $content$admin.shortcut.general.main_menu
-#&gt; [1] "m"
-#&gt; 
-#&gt; $content$show_embed_links
-#&gt; [1] "true"
-#&gt; 
-#&gt; $content$admin.shortcut.player.volume_up
-#&gt; [1] "plus"
-#&gt; 
-#&gt; $content$player.layout
-#&gt; [1] "off"
-#&gt; 
-#&gt; $content$admin.shortcut.player.previous_frame
-#&gt; [1] "left"
-#&gt; 
-#&gt; $content$link_mediamodule
-#&gt; [1] "true"
-#&gt; 
-#&gt; $content$player.shortcut.fullscreen.enable
-#&gt; [1] "mod+enter"
-#&gt; 
-#&gt; $content$admin.shortcut.player.play_pause
-#&gt; [1] "space"
-#&gt; 
-#&gt; $content$player.shortcut.volume.muteToggle
-#&gt; [1] "m"
-#&gt; 
-#&gt; $content$admin.shortcut.player.volume_down
-#&gt; [1] "-"
-#&gt; 
-#&gt; $content$admin.shortcut.player.previous_segment
-#&gt; [1] "up"
-#&gt; 
-#&gt; $content$admin.shortcut.player.step_forward
-#&gt; [1] "ctrl+right"
-#&gt; 
-#&gt; $content$player.shortcut.zoom.moveDown
-#&gt; [1] "s"
-#&gt; 
-#&gt; $content$org.opencastproject.oaipmh.server.hosturl
-#&gt; [1] ""
-#&gt; 
-#&gt; $content$player.shortcut.layout.togglePiP
-#&gt; [1] "o"
-#&gt; 
+#&gt;   agent_id   inputs               update                    url status
+#&gt; 1      SMP defaults 2019-10-29T15:08:24Z http://192.168.100.251   idle
 #&gt; 
 #&gt; $url
-#&gt; [1] "https://legacy.opencast.org/api/info/organization/properties"
+#&gt; [1] "https://legacy.opencast.org/api/agents/"
 #&gt; 
 #&gt; $response
-#&gt; Response [https://legacy.opencast.org/api/info/organization/properties]
+#&gt; Response [https://legacy.opencast.org/api/agents/?limit=0&amp;offset=0]
 #&gt;   Date: 2019-10-29 15:08
 #&gt;   Status: 200
-#&gt;   Content-Type: application/json
-#&gt;   Size: 2.85 kB
-#&gt; 
+#&gt;   Content-Type: application/v1.2.0+json
+#&gt;   Size: 123 B
+#&gt; &lt;BINARY BODY&gt;
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "opencast_api"</div></pre>

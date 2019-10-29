@@ -1,3 +1,7 @@
+# opencastR 0.1.1
+
+* Rewrote the examples
+
 # opencastR 0.1.0
 
 * Completely rewrote the whole package based on httr.

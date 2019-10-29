@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">opencastR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -101,12 +101,7 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/ebbertd/opencastR">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -121,7 +116,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Print result of oc_list_events()</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_list_events.R'><code>R/oc_list_events.R</code></a></small>
+    
     <div class="hidden name"><code>print.oc_list_events.Rd</code></div>
     </div>
 
@@ -153,14 +148,75 @@
     <div class='dont-index'><p><code><a href='oc_list_events.html'>oc_list_events</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-# resp <- oc_list_events()
+<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_list_events.html'>oc_list_events</a></span>()
 
-# resp
-</div></pre>
+<span class='no'>resp</span></div><div class='output co'>#&gt; $content
+#&gt;                             identifier     creator              presenter
+#&gt; 1 dbb56a4e-8f97-48f7-9ae4-bbaa134f5137 System User Durian Open Movie Team
+#&gt; 2 d5d8a9cb-1650-476f-883b-cc0511fc5597 System User            Lars Kiesow
+#&gt; 3 0d2ca3e0-42f2-43ea-b716-e16dfacff3c8 System User           Olaf Schulte
+#&gt; 4 9184505e-dc82-44b2-9200-11b94adff9ca System User     Blender Foundation
+#&gt; 5 58384f85-bf1c-46cc-a96b-e3e4963d7bc9 System User     Blender Foundation
+#&gt;                created                           is_part_of subjects
+#&gt; 1 2019-10-29T01:06:00Z 251e807b-7d0f-4d71-a1a8-1e28281109f3     NULL
+#&gt; 2 2019-10-29T01:05:00Z                                          NULL
+#&gt; 3 2019-10-29T01:05:00Z                                          NULL
+#&gt; 4 2019-10-29T01:05:00Z 251e807b-7d0f-4d71-a1a8-1e28281109f3     NULL
+#&gt; 5 2019-10-29T01:06:00Z 251e807b-7d0f-4d71-a1a8-1e28281109f3     NULL
+#&gt;                  start
+#&gt; 1 2019-10-29T01:06:21Z
+#&gt; 2 2019-10-29T01:05:54Z
+#&gt; 3 2019-10-29T01:05:54Z
+#&gt; 4 2019-10-29T01:06:07Z
+#&gt; 5 2019-10-29T01:06:20Z
+#&gt;                                                                            description
+#&gt; 1                                            Trailer for the Sintel open movie project
+#&gt; 2 Opencast quick Jira ticket and pull request creator, https://github.com/lkiesow/ocpr
+#&gt; 3                                                                                     
+#&gt; 4                                                                                     
+#&gt; 5                                                                                     
+#&gt;   language source                       title processing_state license
+#&gt; 1                              Sintel Trailer        SUCCEEDED        
+#&gt; 2                                   OCPR Demo        SUCCEEDED        
+#&gt; 3                              About Opencast        SUCCEEDED        
+#&gt; 4                              Tears of Steel        SUCCEEDED        
+#&gt; 5                 Tears of Steel (Dualstream)        SUCCEEDED        
+#&gt;   archive_version contributor                         series has_previews
+#&gt; 1               1        NULL Blender Foundation Productions         TRUE
+#&gt; 2               1        NULL                                        TRUE
+#&gt; 3               1        NULL                                        TRUE
+#&gt; 4               1        NULL Blender Foundation Productions         TRUE
+#&gt; 5               1        NULL Blender Foundation Productions         TRUE
+#&gt;   location rightsholder                      publication_status
+#&gt; 1                       internal, engage-player, oaipmh-default
+#&gt; 2                       internal, engage-player, oaipmh-default
+#&gt; 3                       internal, engage-player, oaipmh-default
+#&gt; 4                       internal, engage-player, oaipmh-default
+#&gt; 5                       internal, engage-player, oaipmh-default
+#&gt;                           status
+#&gt; 1 EVENTS.EVENTS.STATUS.PROCESSED
+#&gt; 2 EVENTS.EVENTS.STATUS.PROCESSED
+#&gt; 3 EVENTS.EVENTS.STATUS.PROCESSED
+#&gt; 4 EVENTS.EVENTS.STATUS.PROCESSED
+#&gt; 5 EVENTS.EVENTS.STATUS.PROCESSED
+#&gt; 
+#&gt; $url
+#&gt; [1] "https://legacy.opencast.org/api/events/"
+#&gt; 
+#&gt; $response
+#&gt; Response [https://legacy.opencast.org/api/events/?sign=FALSE&amp;withacl=FALSE&amp;withmetadata=FALSE&amp;withscheduling=FALSE&amp;filter=&amp;sort=&amp;limit=0&amp;offset=0]
+#&gt;   Date: 2019-10-29 15:08
+#&gt;   Status: 200
+#&gt;   Content-Type: application/v1.2.0+json
+#&gt;   Size: 2.97 kB
+#&gt; &lt;BINARY BODY&gt;
+#&gt; 
+#&gt; attr(,"class")
+#&gt; [1] "opencast_api"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

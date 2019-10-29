@@ -18,13 +18,17 @@ A structured print of the return by the oc_event_scheduling() function.
 Print a structured return of the oc_event_scheduling() function.
 }
 \examples{
-# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+\donttest{
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-# resp <- oc_event_scheduling("91df4c57-9631-4a84-b814-d8e9b36a3c32")
+events <- oc_list_events()
 
-# resp
+resp <- oc_event_scheduling(events$content$identifier[1])
+
+resp
+}
 }
 \seealso{
 \code{\link{oc_event_scheduling}}

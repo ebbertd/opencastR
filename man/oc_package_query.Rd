@@ -19,5 +19,5 @@ The response of the api call.
 This is an internal function of the opencastR package to query the api.
 }
 \examples{
-# oc_package_query()
+oc_package_query()
 }

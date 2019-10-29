@@ -13,5 +13,5 @@ A character string containing the user agent used in api calls generate with the
 This function returns the user agent used in api calls of the opencastR package.
 }
 \examples{
-# oc_package_useragent()
+oc_package_useragent()
 }

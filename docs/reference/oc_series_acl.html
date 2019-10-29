@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">opencastR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -101,12 +101,7 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/ebbertd/opencastR">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -121,7 +116,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Query Opencast for a specific series acl</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_series_acl.R'><code>R/oc_series_acl.R</code></a></small>
+    
     <div class="hidden name"><code>oc_series_acl.Rd</code></div>
     </div>
 
@@ -148,11 +143,16 @@
     <p>This function expects the hostname, username and password to be set as environment variables.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+    <pre class="examples"><div class='input'><span class='co'># \donttest{</span>
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-# oc_series_acl("446eed07-853b-4865-9813-07e1fb39d2d5")
+<span class='no'>series</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_list_series.html'>oc_list_series</a></span>()
+
+<span class='fu'>oc_series_acl</span>(<span class='no'>series</span>$<span class='no'>content</span>$<span class='no'>identifier</span>[<span class='fl'>1</span>])</div><div class='output co'>#&gt; <span class='error'>Error: lexical error: invalid char in json text.</span>
+#&gt; <span class='error'>                                       Cannot find acl for series with</span>
+#&gt; <span class='error'>                     (right here) ------^</span></div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

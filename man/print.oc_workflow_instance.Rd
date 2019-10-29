@@ -18,13 +18,15 @@ A structured print of the return by the oc_workflow_instance() function.
 Print a structured return of the oc_workflow_instance() function.
 }
 \examples{
-# Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+Sys.setenv(OPENCAST_USERNAME = "admin")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-# resp <- oc_workflow_instance(548)
+workflow_instances <- oc_list_workflow_instances()
 
-# resp
+resp <- oc_workflow_instance(workflow_instances$content$identifier[1])
+
+resp
 }
 \seealso{
 \code{\link{oc_workflow_instance}}

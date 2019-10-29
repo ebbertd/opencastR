@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">opencastR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -101,12 +101,7 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/ebbertd/opencastR">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -121,7 +116,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Print result of oc_group()</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_group.R'><code>R/oc_group.R</code></a></small>
+    
     <div class="hidden name"><code>print.oc_group.Rd</code></div>
     </div>
 
@@ -153,14 +148,48 @@
     <div class='dont-index'><p><code><a href='oc_group.html'>oc_group</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-# resp <- oc_group("MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS")
+<span class='no'>resp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_group.html'>oc_group</a></span>(<span class='st'>"MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"</span>)
 
-# resp
-</div></pre>
+<span class='no'>resp</span></div><div class='output co'>#&gt; $content
+#&gt; $content$identifier
+#&gt; [1] "MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"
+#&gt; 
+#&gt; $content$role
+#&gt; [1] "ROLE_GROUP_MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"
+#&gt; 
+#&gt; $content$organization
+#&gt; [1] "mh_default_org"
+#&gt; 
+#&gt; $content$roles
+#&gt; [1] "ROLE_API_EVENTS_METADATA_VIEW,ROLE_API_SERIES_DELETE,ROLE_API_GROUPS_CREATE,ROLE_API_EVENTS_MEDIA_VIEW,ROLE_API_SERIES_VIEW,ROLE_API_SERIES_METADATA_VIEW,ROLE_API_WORKFLOW_INSTANCE_EDIT,ROLE_API_SERIES_METADATA_EDIT,ROLE_API_WORKFLOW_INSTANCE_DELETE,ROLE_API_SERIES_ACL_VIEW,ROLE_API_WORKFLOW_INSTANCE_VIEW,ROLE_API_EVENTS_CREATE,ROLE_API_SERIES_PROPERTIES_EDIT,ROLE_API_WORKFLOW_INSTANCE_CREATE,ROLE_API_SERIES_CREATE,ROLE_API_GROUPS_DELETE,ROLE_API_EVENTS_ACL_EDIT,ROLE_API_SERIES_EDIT,ROLE_API_EVENTS_METADATA_EDIT,ROLE_API_EVENTS_METADATA_DELETE,ROLE_API_EVENTS_ACL_DELETE,ROLE_API_EVENTS_VIEW,ROLE_API_GROUPS_VIEW,ROLE_API_EVENTS_SCHEDULING_EDIT,ROLE_API_EVENTS_DELETE,ROLE_API_SECURITY_EDIT,ROLE_API,ROLE_API_CAPTURE_AGENTS_VIEW,ROLE_API_SERIES_ACL_EDIT,ROLE_API_SERIES_PROPERTIES_VIEW,ROLE_API_EVENTS_PUBLICATIONS_VIEW,ROLE_API_EVENTS_SCHEDULING_VIEW,ROLE_SUDO,ROLE_API_SERIES_METADATA_DELETE,ROLE_API_WORKFLOW_DEFINITION_VIEW,ROLE_API_EVENTS_EDIT,ROLE_API_EVENTS_ACL_VIEW,ROLE_API_GROUPS_EDIT"
+#&gt; 
+#&gt; $content$members
+#&gt; [1] ""
+#&gt; 
+#&gt; $content$name
+#&gt; [1] "Opencast Project External Applications"
+#&gt; 
+#&gt; $content$description
+#&gt; [1] "External application users of 'Opencast Project'"
+#&gt; 
+#&gt; 
+#&gt; $url
+#&gt; [1] "https://legacy.opencast.org/api/groups/MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS"
+#&gt; 
+#&gt; $response
+#&gt; Response [https://legacy.opencast.org/api/groups/MH_DEFAULT_ORG_EXTERNAL_APPLICATIONS]
+#&gt;   Date: 2019-10-29 15:08
+#&gt;   Status: 200
+#&gt;   Content-Type: application/v1.2.0+json
+#&gt;   Size: 1.28 kB
+#&gt; &lt;BINARY BODY&gt;
+#&gt; 
+#&gt; attr(,"class")
+#&gt; [1] "opencast_api"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

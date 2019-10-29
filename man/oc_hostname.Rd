@@ -13,10 +13,8 @@ A character string containing the Opencast hostname.
 This function returns the Opencast hostname that is set in the environment variable OPENCAST_HOST.
 }
 \examples{
-# Set the environment variable
 Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
 
-# Read out the environment variable
 oc_hostname()
 }
 \seealso{

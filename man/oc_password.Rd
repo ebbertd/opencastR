@@ -13,9 +13,9 @@ A character string containing the users Opencast password.
 This function returns the users Opencast password that is set in the environment variable OPENCAST_PASSWORD.
 }
 \examples{
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+Sys.setenv(OPENCAST_PASSWORD = "opencast")
 
-# oc_password()
+oc_password()
 }
 \seealso{
 \code{\link{oc_hostname}} \code{\link{oc_username}}

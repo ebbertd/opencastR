@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">opencastR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -101,12 +101,7 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/ebbertd/opencastR">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -121,7 +116,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Query Opencast for a specific series metadata</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_series_metadata.R'><code>R/oc_series_metadata.R</code></a></small>
+    
     <div class="hidden name"><code>oc_series_metadata.Rd</code></div>
     </div>
 
@@ -152,12 +147,31 @@
     <p>This function expects the hostname, username and password to be set as environment variables.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-# oc_series_metadata("91df4c57-9631-4a84-b814-d8e9b36a3c32")
-</div></pre>
+<span class='no'>series</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='oc_list_series.html'>oc_list_series</a></span>()
+
+<span class='fu'>oc_series_metadata</span>(<span class='no'>series</span>$<span class='no'>content</span>$<span class='no'>identifier</span>[<span class='fl'>1</span>])</div><div class='output co'>#&gt; $content
+#&gt;              flavor                      title
+#&gt; 1 dublincore/series Opencast Series DublinCore
+#&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        fields
+#&gt; 1 FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, title, subjects, description, language, rightsHolder, license, creator, contributor, publisher, createdBy, identifier, EVENTS.SERIES.DETAILS.METADATA.TITLE, EVENTS.SERIES.DETAILS.METADATA.SUBJECT, EVENTS.SERIES.DETAILS.METADATA.DESCRIPTION, EVENTS.SERIES.DETAILS.METADATA.LANGUAGE, EVENTS.SERIES.DETAILS.METADATA.RIGHTS, EVENTS.SERIES.DETAILS.METADATA.LICENSE, EVENTS.SERIES.DETAILS.METADATA.ORGANIZERS, EVENTS.SERIES.DETAILS.METADATA.CONTRIBUTORS, EVENTS.SERIES.DETAILS.METADATA.PUBLISHERS, EVENTS.SERIES.DETAILS.METADATA.CREATED_BY, EVENTS.SERIES.DETAILS.METADATA.ID, text, text, text, text, text, text, mixed_text, mixed_text, mixed_text, text, text, Blender Foundation Productions, , , , , Blender Foundation, System User, 251e807b-7d0f-4d71-a1a8-1e28281109f3, TRUE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, NA, NA, NA, TRUE, NA, TRUE, FALSE, FALSE, FALSE, NA, NA
+#&gt; 
+#&gt; $url
+#&gt; [1] "https://legacy.opencast.org/api/series/251e807b-7d0f-4d71-a1a8-1e28281109f3/metadata"
+#&gt; 
+#&gt; $response
+#&gt; Response [https://legacy.opencast.org/api/series/251e807b-7d0f-4d71-a1a8-1e28281109f3/metadata?type=]
+#&gt;   Date: 2019-10-29 15:08
+#&gt;   Status: 200
+#&gt;   Content-Type: application/v1.2.0+json
+#&gt;   Size: 1.7 kB
+#&gt; &lt;BINARY BODY&gt;
+#&gt; 
+#&gt; attr(,"class")
+#&gt; [1] "opencast_api"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

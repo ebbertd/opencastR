@@ -9,11 +9,13 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # oc_workflow_instance(548)
+#' workflow_instances <- oc_list_workflow_instances()
+#'
+#' oc_workflow_instance(workflow_instances$content$identifier[1])
 oc_workflow_instance <- function(workflowInstanceId = 0) {
   # Check needed arguments
   if (workflowInstanceId == 0) {
@@ -41,13 +43,15 @@ oc_workflow_instance <- function(workflowInstanceId = 0) {
 #' @importFrom utils str
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # resp <- oc_workflow_instance(548)
+#' workflow_instances <- oc_list_workflow_instances()
 #'
-#' # resp
+#' resp <- oc_workflow_instance(workflow_instances$content$identifier[1])
+#'
+#' resp
 print.oc_workflow_instance <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

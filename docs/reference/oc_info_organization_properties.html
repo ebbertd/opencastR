@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">opencastR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -101,12 +101,7 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/ebbertd/opencastR">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -121,7 +116,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Query Opencast current organization's properties</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ebbertd/opencastR/blob/master/R/oc_info_organization_properties.R'><code>R/oc_info_organization_properties.R</code></a></small>
+    
     <div class="hidden name"><code>oc_info_organization_properties.Rd</code></div>
     </div>
 
@@ -140,12 +135,214 @@
     <p>This function expects the hostname, username and password to be set as environment variables.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'># Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-# Sys.setenv(OPENCAST_USERNAME = "admin")
-# Sys.setenv(OPENCAST_PASSWORD = "opencast")
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_HOST</span> <span class='kw'>=</span> <span class='st'>"https://legacy.opencast.org"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_USERNAME</span> <span class='kw'>=</span> <span class='st'>"admin"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
-# oc_info_organization_properties()
-</div></pre>
+<span class='fu'>oc_info_organization_properties</span>()</div><div class='output co'>#&gt; $content
+#&gt; $content$admin.shortcut.general.series_view
+#&gt; [1] "s"
+#&gt; 
+#&gt; $content$admin.shortcut.editor.split_at_current_time
+#&gt; [1] "v"
+#&gt; 
+#&gt; $content$player.shortcut.controls.nextChapter
+#&gt; [1] "pageup"
+#&gt; 
+#&gt; $content$admin.shortcut.player.mute
+#&gt; [1] "m"
+#&gt; 
+#&gt; $content$admin.shortcut.general.select_previous_dashboard_filter
+#&gt; [1] "F"
+#&gt; 
+#&gt; $content$player.shortcut.controls.jumpToBegin
+#&gt; [1] "backspace"
+#&gt; 
+#&gt; $content$admin.shortcut.editor.play_ending_of_current_segment
+#&gt; [1] "n"
+#&gt; 
+#&gt; $content$player.mastervideotype
+#&gt; [1] "presenter/delivery"
+#&gt; 
+#&gt; $content$player.shortcut.layout.focusPrev
+#&gt; [1] "&lt;"
+#&gt; 
+#&gt; $content$org.opencastproject.admin.help.documentation.url
+#&gt; [1] "http://docs.opencast.org"
+#&gt; 
+#&gt; $content$player.shortcut.controls.prevChapter
+#&gt; [1] "pagedown"
+#&gt; 
+#&gt; $content$player.positioncontrols
+#&gt; [1] "bottom"
+#&gt; 
+#&gt; $content$player.shortcut.zoom.moveLeft
+#&gt; [1] "a"
+#&gt; 
+#&gt; $content$admin.shortcut.general.event_view
+#&gt; [1] "e"
+#&gt; 
+#&gt; $content$admin.shortcut.editor.clear_list
+#&gt; [1] "ctrl+backspace"
+#&gt; 
+#&gt; $content$adminui.user.external_role_display
+#&gt; [1] "false"
+#&gt; 
+#&gt; $content$org.opencastproject.admin.help.restdocs.url
+#&gt; [1] "/rest_docs.html"
+#&gt; 
+#&gt; $content$logo_mediamodule
+#&gt; [1] "/engage/ui/img/logo/opencast-icon.svg"
+#&gt; 
+#&gt; $content$admin.shortcut.general.new_series
+#&gt; [1] "N"
+#&gt; 
+#&gt; $content$player.shortcut.zoom.moveRight
+#&gt; [1] "d"
+#&gt; 
+#&gt; $content$player.shortcut.layout.movePiP
+#&gt; [1] "p"
+#&gt; 
+#&gt; $content$player.hide_video_context_menu
+#&gt; [1] "false"
+#&gt; 
+#&gt; $content$player.shortcut.playbackrate.decrease
+#&gt; [1] "T"
+#&gt; 
+#&gt; $content$admin.shortcut.general.select_next_dashboard_filter
+#&gt; [1] "f"
+#&gt; 
+#&gt; $content$player.shortcut.zoom.in
+#&gt; [1] "plus"
+#&gt; 
+#&gt; $content$admin.shortcut.player.next_segment
+#&gt; [1] "down"
+#&gt; 
+#&gt; $content$admin.shortcut.general.new_event
+#&gt; [1] "n"
+#&gt; 
+#&gt; $content$player.shortcut.controls.playPause
+#&gt; [1] "space"
+#&gt; 
+#&gt; $content$admin.shortcut.player.next_frame
+#&gt; [1] "right"
+#&gt; 
+#&gt; $content$player.shortcut.fullscreen.cancel
+#&gt; [1] "escape"
+#&gt; 
+#&gt; $content$org.opencastproject.admin.mediamodule.url
+#&gt; [1] "/engage/ui"
+#&gt; 
+#&gt; $content$player.focusedflavor
+#&gt; [1] "presentation"
+#&gt; 
+#&gt; $content$player.allowedtags
+#&gt; [1] "engage-download,engage-streaming"
+#&gt; 
+#&gt; $content$player.shortcut.zoom.moveUp
+#&gt; [1] "w"
+#&gt; 
+#&gt; $content$player.shortcut.zoom.out
+#&gt; [1] "-"
+#&gt; 
+#&gt; $content$player.shortcut.layout.focusNext
+#&gt; [1] "&gt;"
+#&gt; 
+#&gt; $content$`player.shortcut-sequence`
+#&gt; [1] "controls,volume,playbackrate,layout,zoom,fullscreen"
+#&gt; 
+#&gt; $content$player.shortcut.controls.seekLeft
+#&gt; [1] "left"
+#&gt; 
+#&gt; $content$player.shortcut.playbackrate.increase
+#&gt; [1] "t"
+#&gt; 
+#&gt; $content$`admin.shortcut.editor.play_current_segment_with_pre-roll`
+#&gt; [1] "C"
+#&gt; 
+#&gt; $content$player.shortcut.volume.up
+#&gt; [1] "9"
+#&gt; 
+#&gt; $content$admin.shortcut.editor.cut_selected_segment
+#&gt; [1] "backspace"
+#&gt; 
+#&gt; $content$admin.shortcut.player.step_backward
+#&gt; [1] "ctrl+left"
+#&gt; 
+#&gt; $content$player.shortcut.controls.seekRight
+#&gt; [1] "right"
+#&gt; 
+#&gt; $content$admin.shortcut.editor.play_current_segment
+#&gt; [1] "c"
+#&gt; 
+#&gt; $content$logo_player
+#&gt; [1] "/engage/theodul/ui/img/opencast.svg"
+#&gt; 
+#&gt; $content$admin.shortcut.general.remove_filters
+#&gt; [1] "r"
+#&gt; 
+#&gt; $content$player.shortcut.volume.down
+#&gt; [1] "8"
+#&gt; 
+#&gt; $content$admin.shortcut.general.main_menu
+#&gt; [1] "m"
+#&gt; 
+#&gt; $content$show_embed_links
+#&gt; [1] "true"
+#&gt; 
+#&gt; $content$admin.shortcut.player.volume_up
+#&gt; [1] "plus"
+#&gt; 
+#&gt; $content$player.layout
+#&gt; [1] "off"
+#&gt; 
+#&gt; $content$admin.shortcut.player.previous_frame
+#&gt; [1] "left"
+#&gt; 
+#&gt; $content$link_mediamodule
+#&gt; [1] "true"
+#&gt; 
+#&gt; $content$player.shortcut.fullscreen.enable
+#&gt; [1] "mod+enter"
+#&gt; 
+#&gt; $content$admin.shortcut.player.play_pause
+#&gt; [1] "space"
+#&gt; 
+#&gt; $content$player.shortcut.volume.muteToggle
+#&gt; [1] "m"
+#&gt; 
+#&gt; $content$admin.shortcut.player.volume_down
+#&gt; [1] "-"
+#&gt; 
+#&gt; $content$admin.shortcut.player.previous_segment
+#&gt; [1] "up"
+#&gt; 
+#&gt; $content$admin.shortcut.player.step_forward
+#&gt; [1] "ctrl+right"
+#&gt; 
+#&gt; $content$player.shortcut.zoom.moveDown
+#&gt; [1] "s"
+#&gt; 
+#&gt; $content$org.opencastproject.oaipmh.server.hosturl
+#&gt; [1] ""
+#&gt; 
+#&gt; $content$player.shortcut.layout.togglePiP
+#&gt; [1] "o"
+#&gt; 
+#&gt; 
+#&gt; $url
+#&gt; [1] "https://legacy.opencast.org/api/info/organization/properties"
+#&gt; 
+#&gt; $response
+#&gt; Response [https://legacy.opencast.org/api/info/organization/properties]
+#&gt;   Date: 2019-10-29 15:08
+#&gt;   Status: 200
+#&gt;   Content-Type: application/json
+#&gt;   Size: 2.85 kB
+#&gt; 
+#&gt; 
+#&gt; attr(,"class")
+#&gt; [1] "opencast_api"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

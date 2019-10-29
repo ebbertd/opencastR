@@ -10,12 +10,12 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # oc_agents()
-oc_agents <- function(limit = 0, offset = 0) {
+#' oc_list_agents()
+oc_list_agents <- function(limit = 0, offset = 0) {
   # Set the url path
   path <- "/api/agents/"
   query <- list(
@@ -30,25 +30,25 @@ oc_agents <- function(limit = 0, offset = 0) {
   oc_package_query(url, query = query)
 }
 
-#' Print result of oc_agents()
+#' Print result of oc_list_agents()
 #'
-#' Print a structured return of the oc_agents() function.
+#' Print a structured return of the oc_list_agents() function.
 #'
 #' @param x The return of the function this print function relates to.
 #' @param ... Possible further options to the print function.
-#' @return A structured print of the return by the oc_agents() function.
-#' @seealso \code{\link{oc_agents}}
+#' @return A structured print of the return by the oc_list_agents() function.
+#' @seealso \code{\link{oc_list_agents}}
 #' @importFrom utils str
 #' @export
 #' @examples
-#' # Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
-#' # Sys.setenv(OPENCAST_USERNAME = "admin")
-#' # Sys.setenv(OPENCAST_PASSWORD = "opencast")
+#' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
+#' Sys.setenv(OPENCAST_USERNAME = "admin")
+#' Sys.setenv(OPENCAST_PASSWORD = "opencast")
 #'
-#' # resp <- oc_agents()
+#' resp <- oc_list_agents()
 #'
-#' # resp
-print.oc_agents <- function(x, ...) {
+#' resp
+print.oc_list_agents <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)
   invisible(x)
