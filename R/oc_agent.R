@@ -9,6 +9,7 @@
 #' @importFrom httr modify_url
 #' @export
 #' @examples
+#' \donttest{
 #' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
@@ -16,6 +17,7 @@
 #' agents <- oc_list_agents()
 #'
 #' oc_agent(agents$content$agent_id)
+#' }
 oc_agent <- function(agentId = "") {
   # Check needed arguments
   if (agentId == "") {
@@ -43,6 +45,7 @@ oc_agent <- function(agentId = "") {
 #' @importFrom utils str
 #' @export
 #' @examples
+#' \donttest{
 #' Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
 #' Sys.setenv(OPENCAST_USERNAME = "admin")
 #' Sys.setenv(OPENCAST_PASSWORD = "opencast")
@@ -52,6 +55,7 @@ oc_agent <- function(agentId = "") {
 #' resp <- oc_agent(agents$content$agent_id)
 #'
 #' resp
+#' }
 print.oc_agent <- function(x, ...) {
   cat("<Opencast ", x$path, ">\n", sep = "")
   str(x$content)

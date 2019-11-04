@@ -19,6 +19,7 @@ Returns a single capture agent.
 This function expects the hostname, username and password to be set as environment variables.
 }
 \examples{
+\donttest{
 Sys.setenv(OPENCAST_HOST = "https://legacy.opencast.org")
 Sys.setenv(OPENCAST_USERNAME = "admin")
 Sys.setenv(OPENCAST_PASSWORD = "opencast")
@@ -26,4 +27,5 @@ Sys.setenv(OPENCAST_PASSWORD = "opencast")
 agents <- oc_list_agents()
 
 oc_agent(agents$content$agent_id)
+}
 }

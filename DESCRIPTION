@@ -1,7 +1,7 @@
 Type: Package
 Package: opencastR
 Title: 'Opencast' External API Package
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
   person("Daniel", "Ebbert", email = "daniel.ebbert@uni-muenster.de", role = c("cre", "aut"), comment = c(ORCID = "0000-0003-3666-7205")))
 Description: Query the external API of a 'Opencast' video management server for information related to the recorded videos. For more information about 'Opencast' see: <https://opencast.org>.
