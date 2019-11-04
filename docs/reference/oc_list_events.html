@@ -182,24 +182,24 @@
 <span class='fu'><a href='https://rdrr.io/r/base/Sys.setenv.html'>Sys.setenv</a></span>(<span class='kw'>OPENCAST_PASSWORD</span> <span class='kw'>=</span> <span class='st'>"opencast"</span>)
 
 <span class='fu'>oc_list_events</span>()</div><div class='output co'>#&gt; $content
-#&gt;                             identifier     creator              presenter
-#&gt; 1 91708b2e-285e-4f08-855d-2ad882c42002 System User Durian Open Movie Team
-#&gt; 2 ab92cc10-c422-4d54-99db-055563658897 System User            Lars Kiesow
-#&gt; 3 cfa2d07e-389a-4785-aa4d-49e0c2073f13 System User           Olaf Schulte
-#&gt; 4 869a0e15-4a65-4363-8f40-971b40e6bc05 System User     Blender Foundation
-#&gt; 5 a05cd45a-606c-4076-a60f-44f1cf0a38f1 System User     Blender Foundation
-#&gt;                created                           is_part_of subjects
-#&gt; 1 2019-11-04T01:06:00Z a1b6787e-1cfa-49e7-85ce-09d36677b92e     NULL
-#&gt; 2 2019-11-04T01:05:00Z                                          NULL
-#&gt; 3 2019-11-04T01:05:00Z                                          NULL
-#&gt; 4 2019-11-04T01:05:00Z a1b6787e-1cfa-49e7-85ce-09d36677b92e     NULL
-#&gt; 5 2019-11-04T01:06:00Z a1b6787e-1cfa-49e7-85ce-09d36677b92e     NULL
-#&gt;                  start
-#&gt; 1 2019-11-04T01:06:19Z
-#&gt; 2 2019-11-04T01:05:53Z
-#&gt; 3 2019-11-04T01:05:52Z
-#&gt; 4 2019-11-04T01:06:06Z
-#&gt; 5 2019-11-04T01:06:19Z
+#&gt;                             identifier                        creator
+#&gt; 1 91708b2e-285e-4f08-855d-2ad882c42002                    System User
+#&gt; 2 ab92cc10-c422-4d54-99db-055563658897                    System User
+#&gt; 3 869a0e15-4a65-4363-8f40-971b40e6bc05                    System User
+#&gt; 4 a05cd45a-606c-4076-a60f-44f1cf0a38f1                    System User
+#&gt; 5 cfa2d07e-389a-4785-aa4d-49e0c2073f13 Opencast Project Administrator
+#&gt;                presenter              created
+#&gt; 1 Durian Open Movie Team 2019-11-04T01:06:00Z
+#&gt; 2            Lars Kiesow 2019-11-04T01:05:00Z
+#&gt; 3     Blender Foundation 2019-11-04T01:05:00Z
+#&gt; 4     Blender Foundation 2019-11-04T01:06:00Z
+#&gt; 5           Olaf Schulte 2019-11-04T01:05:00Z
+#&gt;                             is_part_of subjects                start
+#&gt; 1 a1b6787e-1cfa-49e7-85ce-09d36677b92e     NULL 2019-11-04T01:06:19Z
+#&gt; 2                                          NULL 2019-11-04T01:05:53Z
+#&gt; 3 a1b6787e-1cfa-49e7-85ce-09d36677b92e     NULL 2019-11-04T01:06:06Z
+#&gt; 4 a1b6787e-1cfa-49e7-85ce-09d36677b92e     NULL 2019-11-04T01:06:19Z
+#&gt; 5                                          NULL 2019-11-04T01:05:52Z
 #&gt;                                                                            description
 #&gt; 1                                            Trailer for the Sintel open movie project
 #&gt; 2 Opencast quick Jira ticket and pull request creator, https://github.com/lkiesow/ocpr
@@ -209,21 +209,21 @@
 #&gt;   language source                       title processing_state license
 #&gt; 1                              Sintel Trailer        SUCCEEDED        
 #&gt; 2                                   OCPR Demo        SUCCEEDED        
-#&gt; 3                              About Opencast        SUCCEEDED        
-#&gt; 4                              Tears of Steel        SUCCEEDED        
-#&gt; 5                 Tears of Steel (Dualstream)        SUCCEEDED        
+#&gt; 3                              Tears of Steel        SUCCEEDED        
+#&gt; 4                 Tears of Steel (Dualstream)        SUCCEEDED        
+#&gt; 5                              About Opencast        SUCCEEDED        
 #&gt;   archive_version contributor                         series has_previews
 #&gt; 1               1        NULL Blender Foundation Productions         TRUE
 #&gt; 2               1        NULL                                        TRUE
-#&gt; 3               1        NULL                                        TRUE
+#&gt; 3               1        NULL Blender Foundation Productions         TRUE
 #&gt; 4               1        NULL Blender Foundation Productions         TRUE
-#&gt; 5               1        NULL Blender Foundation Productions         TRUE
+#&gt; 5               2        NULL                                       FALSE
 #&gt;   location rightsholder                      publication_status
 #&gt; 1                       internal, engage-player, oaipmh-default
 #&gt; 2                       internal, engage-player, oaipmh-default
 #&gt; 3                       internal, engage-player, oaipmh-default
 #&gt; 4                       internal, engage-player, oaipmh-default
-#&gt; 5                       internal, engage-player, oaipmh-default
+#&gt; 5                                                              
 #&gt;                           status
 #&gt; 1 EVENTS.EVENTS.STATUS.PROCESSED
 #&gt; 2 EVENTS.EVENTS.STATUS.PROCESSED
@@ -236,10 +236,10 @@
 #&gt; 
 #&gt; $response
 #&gt; Response [https://legacy.opencast.org/api/events/?sign=FALSE&amp;withacl=FALSE&amp;withmetadata=FALSE&amp;withscheduling=FALSE&amp;filter=&amp;sort=&amp;limit=0&amp;offset=0]
-#&gt;   Date: 2019-11-04 10:27
+#&gt;   Date: 2019-11-04 11:18
 #&gt;   Status: 200
 #&gt;   Content-Type: application/v1.2.0+json
-#&gt;   Size: 2.97 kB
+#&gt;   Size: 2.95 kB
 #&gt; &lt;BINARY BODY&gt;
 #&gt; 
 #&gt; attr(,"class")
