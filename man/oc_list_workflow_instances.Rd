@@ -4,9 +4,14 @@
 \alias{oc_list_workflow_instances}
 \title{Query Opencast for the list of workflow instances}
 \usage{
-oc_list_workflow_instances(withoperations = FALSE,
-  withconfigurationpanel = FALSE, filter = "", sort = "",
-  limit = 0, offset = 0)
+oc_list_workflow_instances(
+  withoperations = FALSE,
+  withconfigurationpanel = FALSE,
+  filter = "",
+  sort = "",
+  limit = 0,
+  offset = 0
+)
 }
 \arguments{
 \item{withoperations}{Whether the workflow operations should be included in the response.}

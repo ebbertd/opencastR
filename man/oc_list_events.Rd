@@ -4,9 +4,17 @@
 \alias{oc_list_events}
 \title{Query Opencast for a list of events}
 \usage{
-oc_list_events(sign = FALSE, withacl = FALSE, withmetadata = FALSE,
-  withscheduling = FALSE, withpublications = FALSE, filter = "",
-  sort = "", limit = 0, offset = 0)
+oc_list_events(
+  sign = FALSE,
+  withacl = FALSE,
+  withmetadata = FALSE,
+  withscheduling = FALSE,
+  withpublications = FALSE,
+  filter = "",
+  sort = "",
+  limit = 0,
+  offset = 0
+)
 }
 \arguments{
 \item{sign}{Whether public distribution urls should be signed.}

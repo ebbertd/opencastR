@@ -4,9 +4,14 @@
 \alias{oc_event}
 \title{Query Opencast for a specific event}
 \usage{
-oc_event(eventId = "", sign = FALSE, withacl = FALSE,
-  withmetadata = FALSE, withscheduling = FALSE,
-  withpublications = FALSE)
+oc_event(
+  eventId = "",
+  sign = FALSE,
+  withacl = FALSE,
+  withmetadata = FALSE,
+  withscheduling = FALSE,
+  withpublications = FALSE
+)
 }
 \arguments{
 \item{eventId}{The event id}

@@ -1,3 +1,7 @@
+# opencastR 0.1.3
+
+* Removed oc_group example from being tested
+
 # opencastR 0.1.2
 
 * Removed an example from always been run as it can't always be used with the testserver

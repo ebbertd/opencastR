@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">opencastR</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.3</span>
       </span>
     </div>
 
@@ -124,9 +124,17 @@
     <p>Returns a list of events.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>oc_list_events</span>(<span class='kw'>sign</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>withacl</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>withmetadata</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>withscheduling</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>withpublications</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>filter</span> <span class='kw'>=</span> <span class='st'>""</span>,
-  <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>)</pre>
+    <pre class="usage"><span class='fu'>oc_list_events</span>(
+  <span class='kw'>sign</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>withacl</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>withmetadata</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>withscheduling</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>withpublications</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>filter</span> <span class='kw'>=</span> <span class='st'>""</span>,
+  <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>""</span>,
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>0</span>,
+  <span class='kw'>offset</span> <span class='kw'>=</span> <span class='fl'>0</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -183,23 +191,23 @@
 
 <span class='fu'>oc_list_events</span>()</div><div class='output co'>#&gt; $content
 #&gt;                             identifier                        creator
-#&gt; 1 91708b2e-285e-4f08-855d-2ad882c42002                    System User
-#&gt; 2 ab92cc10-c422-4d54-99db-055563658897                    System User
-#&gt; 3 869a0e15-4a65-4363-8f40-971b40e6bc05                    System User
-#&gt; 4 a05cd45a-606c-4076-a60f-44f1cf0a38f1                    System User
-#&gt; 5 cfa2d07e-389a-4785-aa4d-49e0c2073f13 Opencast Project Administrator
+#&gt; 1 71061353-56cc-4249-8b8c-6ae7e4fa694d Opencast Project Administrator
+#&gt; 2 2c028936-6610-4ea2-af4e-bc88eb6ee50a Opencast Project Administrator
+#&gt; 3 4bfb829b-fe30-4ca4-8387-b5921781e6af Opencast Project Administrator
+#&gt; 4 bb69d37c-f842-4818-acf5-1e7a6986e2c1 Opencast Project Administrator
+#&gt; 5 5f7b4557-e6c3-4669-a0f1-e7484d66617a Opencast Project Administrator
 #&gt;                presenter              created
-#&gt; 1 Durian Open Movie Team 2019-11-04T01:06:00Z
-#&gt; 2            Lars Kiesow 2019-11-04T01:05:00Z
-#&gt; 3     Blender Foundation 2019-11-04T01:05:00Z
-#&gt; 4     Blender Foundation 2019-11-04T01:06:00Z
-#&gt; 5           Olaf Schulte 2019-11-04T01:05:00Z
+#&gt; 1 Durian Open Movie Team 2020-03-19T01:04:00Z
+#&gt; 2            Lars Kiesow 2020-03-19T01:03:00Z
+#&gt; 3           Olaf Schulte 2020-03-19T01:03:00Z
+#&gt; 4     Blender Foundation 2020-03-19T01:03:00Z
+#&gt; 5     Blender Foundation 2020-03-19T01:03:00Z
 #&gt;                             is_part_of subjects                start
-#&gt; 1 a1b6787e-1cfa-49e7-85ce-09d36677b92e     NULL 2019-11-04T01:06:19Z
-#&gt; 2                                          NULL 2019-11-04T01:05:53Z
-#&gt; 3 a1b6787e-1cfa-49e7-85ce-09d36677b92e     NULL 2019-11-04T01:06:06Z
-#&gt; 4 a1b6787e-1cfa-49e7-85ce-09d36677b92e     NULL 2019-11-04T01:06:19Z
-#&gt; 5                                          NULL 2019-11-04T01:05:52Z
+#&gt; 1 706543e3-c731-41de-b6c7-ed28c90b3635     NULL 2020-03-19T01:04:06Z
+#&gt; 2                                          NULL 2020-03-19T01:03:39Z
+#&gt; 3                                          NULL 2020-03-19T01:03:39Z
+#&gt; 4 706543e3-c731-41de-b6c7-ed28c90b3635     NULL 2020-03-19T01:03:52Z
+#&gt; 5 706543e3-c731-41de-b6c7-ed28c90b3635     NULL 2020-03-19T01:04:06Z
 #&gt;                                                                            description
 #&gt; 1                                            Trailer for the Sintel open movie project
 #&gt; 2 Opencast quick Jira ticket and pull request creator, https://github.com/lkiesow/ocpr
@@ -209,21 +217,21 @@
 #&gt;   language source                       title processing_state license
 #&gt; 1                              Sintel Trailer        SUCCEEDED        
 #&gt; 2                                   OCPR Demo        SUCCEEDED        
-#&gt; 3                              Tears of Steel        SUCCEEDED        
-#&gt; 4                 Tears of Steel (Dualstream)        SUCCEEDED        
-#&gt; 5                              About Opencast        SUCCEEDED        
+#&gt; 3                              About Opencast        SUCCEEDED        
+#&gt; 4                              Tears of Steel        SUCCEEDED        
+#&gt; 5                 Tears of Steel (Dualstream)        SUCCEEDED        
 #&gt;   archive_version contributor                         series has_previews
 #&gt; 1               1        NULL Blender Foundation Productions         TRUE
 #&gt; 2               1        NULL                                        TRUE
-#&gt; 3               1        NULL Blender Foundation Productions         TRUE
+#&gt; 3               1        NULL                                        TRUE
 #&gt; 4               1        NULL Blender Foundation Productions         TRUE
-#&gt; 5               2        NULL                                       FALSE
+#&gt; 5               1        NULL Blender Foundation Productions         TRUE
 #&gt;   location rightsholder                      publication_status
 #&gt; 1                       internal, engage-player, oaipmh-default
 #&gt; 2                       internal, engage-player, oaipmh-default
 #&gt; 3                       internal, engage-player, oaipmh-default
 #&gt; 4                       internal, engage-player, oaipmh-default
-#&gt; 5                                                              
+#&gt; 5                       internal, engage-player, oaipmh-default
 #&gt;                           status
 #&gt; 1 EVENTS.EVENTS.STATUS.PROCESSED
 #&gt; 2 EVENTS.EVENTS.STATUS.PROCESSED
@@ -236,10 +244,10 @@
 #&gt; 
 #&gt; $response
 #&gt; Response [https://legacy.opencast.org/api/events/?sign=FALSE&amp;withacl=FALSE&amp;withmetadata=FALSE&amp;withscheduling=FALSE&amp;filter=&amp;sort=&amp;limit=0&amp;offset=0]
-#&gt;   Date: 2019-11-04 11:18
+#&gt;   Date: 2020-03-19 11:21
 #&gt;   Status: 200
 #&gt;   Content-Type: application/v1.2.0+json
-#&gt;   Size: 2.95 kB
+#&gt;   Size: 3.07 kB
 #&gt; &lt;BINARY BODY&gt;
 #&gt; 
 #&gt; attr(,"class")

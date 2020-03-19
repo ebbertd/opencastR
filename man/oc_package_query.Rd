@@ -4,8 +4,7 @@
 \alias{oc_package_query}
 \title{opencastR query function}
 \usage{
-oc_package_query(url = "https://legacy.opencast.org/api/",
-  query = NULL)
+oc_package_query(url = "https://legacy.opencast.org/api/", query = NULL)
 }
 \arguments{
 \item{url}{The URL for the api call.}
