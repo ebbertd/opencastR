@@ -1,6 +1,5 @@
 <!-- badges: start -->
   [![Build Status](https://travis-ci.org/ebbertd/opencastR.svg?branch=master)](https://travis-ci.org/ebbertd/opencastR)
-  [![CRAN status](https://www.r-pkg.org/badges/version/opencastR)](https://CRAN.R-project.org/package=opencastR)
   <!-- badges: end -->
 
 # Overview
