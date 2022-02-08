@@ -39,7 +39,8 @@ oc_event <- function(eventId = "",
     sign = sign,
     withacl = withacl,
     withmetadata = withmetadata,
-    withscheduling = withscheduling
+    withscheduling = withscheduling,
+    withpublications = withpublications
   )
 
   # Construct the url for the api call
